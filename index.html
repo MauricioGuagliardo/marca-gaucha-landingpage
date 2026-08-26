@@ -79,14 +79,14 @@ img{max-width:100%;display:block}
 .benefit-card p{font-size:.84rem;color:var(--ink-muted);line-height:1.65;margin:0}
 
 /* ── 3. PRODUTOS ─────────────────────────────────────────── */
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem}
-.cat-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .18s,border-color .18s;background:#fff}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem}
+.cat-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .18s,border-color .18s;background:#fff;display:flex;flex-direction:column}
 .cat-card:hover{box-shadow:var(--shadow-md);border-color:var(--border-2)}
-.cat-img{height:160px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:3rem;border-bottom:1px solid var(--border)}
-.cat-body{padding:1rem 1.125rem}
-.cat-title{font-size:.9rem;font-weight:700;margin:0 0 .3rem}
-.cat-desc{font-size:.78rem;color:var(--ink-muted);margin:0;line-height:1.55}
-.cat-tag{display:inline-block;font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink);background:var(--surface2);border:1px solid var(--border);padding:.18rem .6rem;border-radius:99px;margin-top:.75rem}
+.cat-img{height:120px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:2.5rem;border-bottom:1px solid var(--border);flex-shrink:0}
+.cat-body{padding:.875rem 1rem 1rem;display:flex;flex-direction:column;gap:.625rem;flex:1}
+.cat-title{font-size:.88rem;font-weight:700;margin:0;text-align:center}
+.cat-btn{display:block;width:100%;padding:.45rem .5rem;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:center;border:1.5px solid var(--border-2);border-radius:var(--radius);color:var(--ink);background:transparent;cursor:pointer;transition:all .16s;font-family:'Inter',sans-serif;margin-top:auto}
+.cat-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 
 /* ── 4. PROVA SOCIAL ─────────────────────────────────────── */
 .partners-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:4rem}
@@ -240,51 +240,108 @@ textarea.form-input{resize:vertical;min-height:80px}
     </div>
     <div class="cat-grid">
       <div class="cat-card fade">
-        <div class="cat-img">🎁</div>
+        <div class="cat-img">💧</div>
         <div class="cat-body">
-          <p class="cat-title">Kits Boas-Vindas</p>
-          <p class="cat-desc">Conjuntos personalizados para receber novos colaboradores, clientes VIP ou presentear em datas especiais.</p>
-          <span class="cat-tag">Onboarding · RH · VIP</span>
+          <p class="cat-title">Garrafas e Squeezes</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
         </div>
       </div>
       <div class="cat-card fade">
-        <div class="cat-img">🌿</div>
+        <div class="cat-img">☕</div>
         <div class="cat-body">
-          <p class="cat-title">Linha Eco-Friendly</p>
-          <p class="cat-desc">Squeezes, sacolas retornáveis, canecas e itens sustentáveis que reforçam os valores da sua empresa.</p>
-          <span class="cat-tag">Sustentável · ESG</span>
+          <p class="cat-title">Copos e Canecas</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🍷</div>
+        <div class="cat-body">
+          <p class="cat-title">Vinho e Bar</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🍳</div>
+        <div class="cat-body">
+          <p class="cat-title">Cozinha</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🧊</div>
+        <div class="cat-body">
+          <p class="cat-title">Bolsas Térmicas</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🎒</div>
+        <div class="cat-body">
+          <p class="cat-title">Mochilas e Bolsas</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
         </div>
       </div>
       <div class="cat-card fade">
         <div class="cat-img">💻</div>
         <div class="cat-body">
-          <p class="cat-title">Eletrônicos & Tecnologia</p>
-          <p class="cat-desc">Fones, hubs USB, carregadores wireless, power banks e acessórios tech que encantam qualquer público.</p>
-          <span class="cat-tag">Tech · Premium</span>
+          <p class="cat-title">Tecnologia</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
         </div>
       </div>
       <div class="cat-card fade">
-        <div class="cat-img">✏️</div>
+        <div class="cat-img">📋</div>
         <div class="cat-body">
-          <p class="cat-title">Escritório & Papelaria</p>
-          <p class="cat-desc">Canetas, cadernos, organizadores, mochilas e itens de uso diário que mantêm sua marca presente no trabalho.</p>
-          <span class="cat-tag">Cotidiano · Alta Rotatividade</span>
+          <p class="cat-title">Escritório e Papelaria</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
         </div>
       </div>
       <div class="cat-card fade">
-        <div class="cat-img">👕</div>
+        <div class="cat-img">🏃</div>
         <div class="cat-body">
-          <p class="cat-title">Vestuário & Uniformes</p>
-          <p class="cat-desc">Camisetas, bonés, jaquetas e polos bordadas que transformam sua equipe em embaixadores da marca.</p>
-          <span class="cat-tag">Bordado · Serigrafia</span>
+          <p class="cat-title">Saúde e Bem-Estar</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
         </div>
       </div>
       <div class="cat-card fade">
-        <div class="cat-img">🏆</div>
+        <div class="cat-img">🏠</div>
         <div class="cat-body">
-          <p class="cat-title">Linha Premium & Eventos</p>
-          <p class="cat-desc">Presentes executivos, garrafas inox, vinhos e kits exclusivos para impressionar clientes e parceiros estratégicos.</p>
-          <span class="cat-tag">Alto Padrão · Eventos</span>
+          <p class="cat-title">Casa e Utilidades</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">⚽</div>
+        <div class="cat-body">
+          <p class="cat-title">Esporte e Lazer</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">✨</div>
+        <div class="cat-body">
+          <p class="cat-title">Acessórios</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🚗</div>
+        <div class="cat-body">
+          <p class="cat-title">Automotivo</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🐾</div>
+        <div class="cat-body">
+          <p class="cat-title">Linha Pet</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">📦</div>
+        <div class="cat-body">
+          <p class="cat-title">Embalagens</p>
+          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
         </div>
       </div>
     </div>

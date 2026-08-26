@@ -1,0 +1,704 @@
+<title>BrindesCorp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+
+<style>
+/* ─── Bootstrap Grid Subset (inline, CSP-safe) ───────────────────────── */
+*,*::before,*::after{box-sizing:border-box}
+.container{width:100%;max-width:1200px;padding-right:1.5rem;padding-left:1.5rem;margin-right:auto;margin-left:auto}
+.container-fluid{width:100%;padding-right:1.5rem;padding-left:1.5rem;margin-right:auto;margin-left:auto}
+.row{display:flex;flex-wrap:wrap;margin-right:-.75rem;margin-left:-.75rem}
+.row>*{padding-right:.75rem;padding-left:.75rem;flex-shrink:0;width:100%;max-width:100%}
+.col{flex:1 0 0%}
+.col-12{flex:0 0 auto;width:100%}
+.col-6{flex:0 0 auto;width:50%}
+.col-4{flex:0 0 auto;width:33.3333%}
+.col-3{flex:0 0 auto;width:25%}
+.col-auto{flex:0 0 auto;width:auto}
+@media(min-width:576px){
+  .col-sm-6{flex:0 0 auto;width:50%}
+  .col-sm-4{flex:0 0 auto;width:33.3333%}
+  .col-sm-3{flex:0 0 auto;width:25%}
+}
+@media(min-width:768px){
+  .col-md-12{flex:0 0 auto;width:100%}
+  .col-md-8{flex:0 0 auto;width:66.6666%}
+  .col-md-6{flex:0 0 auto;width:50%}
+  .col-md-5{flex:0 0 auto;width:41.6666%}
+  .col-md-4{flex:0 0 auto;width:33.3333%}
+  .col-md-3{flex:0 0 auto;width:25%}
+  .col-md-auto{flex:0 0 auto;width:auto}
+  .d-md-block{display:block!important}
+  .d-md-none{display:none!important}
+  .d-md-flex{display:flex!important}
+}
+@media(min-width:992px){
+  .col-lg-8{flex:0 0 auto;width:66.6666%}
+  .col-lg-7{flex:0 0 auto;width:58.3333%}
+  .col-lg-6{flex:0 0 auto;width:50%}
+  .col-lg-5{flex:0 0 auto;width:41.6666%}
+  .col-lg-4{flex:0 0 auto;width:33.3333%}
+  .col-lg-3{flex:0 0 auto;width:25%}
+  .col-lg-2{flex:0 0 auto;width:16.6666%}
+  .offset-lg-1{margin-left:8.3333%}
+}
+/* Utilities */
+.d-flex{display:flex!important}.d-block{display:block!important}.d-none{display:none!important}.d-grid{display:grid!important}
+.align-items-center{align-items:center!important}.align-items-start{align-items:flex-start!important}.align-items-end{align-items:flex-end!important}
+.justify-content-center{justify-content:center!important}.justify-content-between{justify-content:space-between!important}.justify-content-end{justify-content:flex-end!important}
+.flex-wrap{flex-wrap:wrap!important}.flex-column{flex-direction:column!important}.flex-shrink-0{flex-shrink:0!important}
+.text-center{text-align:center!important}.text-start{text-align:start!important}
+.w-100{width:100%!important}.h-100{height:100%!important}
+.position-relative{position:relative!important}.position-fixed{position:fixed!important}.position-sticky{position:sticky!important}
+.overflow-hidden{overflow:hidden!important}.overflow-x-auto{overflow-x:auto!important}
+.top-0{top:0!important}.z-1{z-index:1!important}.z-100{z-index:100!important}.z-999{z-index:999!important}
+.ms-auto{margin-left:auto!important}.me-auto{margin-right:auto!important}.mx-auto{margin-left:auto!important;margin-right:auto!important}
+.mt-0{margin-top:0!important}.mt-1{margin-top:.25rem!important}.mt-2{margin-top:.5rem!important}.mt-3{margin-top:1rem!important}.mt-4{margin-top:1.5rem!important}.mt-5{margin-top:3rem!important}
+.mb-0{margin-bottom:0!important}.mb-1{margin-bottom:.25rem!important}.mb-2{margin-bottom:.5rem!important}.mb-3{margin-bottom:1rem!important}.mb-4{margin-bottom:1.5rem!important}.mb-5{margin-bottom:3rem!important}
+.me-1{margin-right:.25rem!important}.me-2{margin-right:.5rem!important}.me-3{margin-right:1rem!important}
+.ms-1{margin-left:.25rem!important}.ms-2{margin-left:.5rem!important}.ms-3{margin-left:1rem!important}
+.p-0{padding:0!important}.p-3{padding:1rem!important}.p-4{padding:1.5rem!important}.p-5{padding:3rem!important}
+.px-3{padding-left:1rem!important;padding-right:1rem!important}.px-4{padding-left:1.5rem!important;padding-right:1.5rem!important}
+.py-2{padding-top:.5rem!important;padding-bottom:.5rem!important}.py-3{padding-top:1rem!important;padding-bottom:1rem!important}.py-4{padding-top:1.5rem!important;padding-bottom:1.5rem!important}.py-5{padding-top:3rem!important;padding-bottom:3rem!important}
+.pt-0{padding-top:0!important}.pt-3{padding-top:1rem!important}.pt-4{padding-top:1.5rem!important}.pt-5{padding-top:3rem!important}
+.pb-0{padding-bottom:0!important}.pb-3{padding-bottom:1rem!important}.pb-4{padding-bottom:1.5rem!important}.pb-5{padding-bottom:3rem!important}
+.gap-1{gap:.25rem!important}.gap-2{gap:.5rem!important}.gap-3{gap:1rem!important}.gap-4{gap:1.5rem!important}.gap-5{gap:3rem!important}
+.rounded{border-radius:var(--radius)!important}.rounded-lg{border-radius:var(--radius-lg)!important}.rounded-circle{border-radius:50%!important}.rounded-pill{border-radius:999px!important}
+.border{border:1px solid var(--border)!important}.border-0{border:0!important}
+.shadow{box-shadow:var(--shadow)!important}.shadow-lg{box-shadow:var(--shadow-lg)!important}
+.fw-400{font-weight:400!important}.fw-500{font-weight:500!important}.fw-600{font-weight:600!important}.fw-700{font-weight:700!important}
+.fs-sm{font-size:.82rem!important}.fs-xs{font-size:.75rem!important}
+/* Bootstrap Form Components */
+.form-label{display:block;font-size:.78rem;font-weight:600;margin-bottom:.35rem;color:var(--ink);letter-spacing:.02em}
+.form-control,.form-select{
+  display:block;width:100%;
+  padding:.7rem .95rem;
+  font-size:.88rem;font-family:inherit;line-height:1.5;
+  color:var(--ink);background:var(--bg);
+  border:1.5px solid var(--border);border-radius:var(--radius);
+  outline:none;
+  transition:border-color .15s,box-shadow .15s;
+  -webkit-appearance:none;appearance:none
+}
+.form-control:focus,.form-select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-light)}
+textarea.form-control{resize:vertical;min-height:90px}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236C7A8D' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .75rem center;background-size:14px;padding-right:2.25rem}
+/* Bootstrap Card */
+.card{background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden}
+.card-body{padding:1.875rem}
+
+/* ─── Design Tokens ──────────────────────────────────────────────────── */
+:root {
+  --bg: #F1EBE2;
+  --bg-alt: #E8E0D4;
+  --surface: #FFFFFF;
+  --ink: #1B2A3B;
+  --ink-muted: #6C7A8D;
+  --accent: #C4773A;
+  --accent-h: #B36830;
+  --accent-light: rgba(196,119,58,0.12);
+  --border: #D4CCC2;
+  --dark: #1B2A3B;
+  --dark2: #223347;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --shadow: 0 2px 16px rgba(27,42,59,0.08);
+  --shadow-lg: 0 8px 40px rgba(27,42,59,0.14);
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1B28;--bg-alt:#152235;--surface:#1C2B3C;
+    --ink:#EDE7DF;--ink-muted:#8A9BB0;--accent:#D4883A;--accent-h:#E59A4A;
+    --accent-light:rgba(212,136,58,.15);--border:#283C52;
+    --dark:#0A1520;--dark2:#0F1B28;
+    --shadow:0 2px 16px rgba(0,0,0,.3);--shadow-lg:0 8px 40px rgba(0,0,0,.4)
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1B28;--bg-alt:#152235;--surface:#1C2B3C;
+  --ink:#EDE7DF;--ink-muted:#8A9BB0;--accent:#D4883A;--accent-h:#E59A4A;
+  --accent-light:rgba(212,136,58,.15);--border:#283C52;
+  --dark:#0A1520;--dark2:#0F1B28;
+  --shadow:0 2px 16px rgba(0,0,0,.3);--shadow-lg:0 8px 40px rgba(0,0,0,.4)
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────── */
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+img{max-width:100%}
+
+/* ─── Typography ─────────────────────────────────────────────────────── */
+.serif{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.1;text-wrap:balance}
+h1.serif{font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.02em}
+h2.serif{font-size:clamp(1.6rem,3.2vw,2.6rem);letter-spacing:-.01em}
+.eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block}
+
+/* ─── Section spacing ────────────────────────────────────────────────── */
+.section{padding:5rem 0}
+.section-alt{background:var(--bg-alt)}
+.section-dark{background:var(--dark);color:#fff}
+.section-dark .eyebrow{color:var(--accent)}
+
+/* ─── Buttons ────────────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.6rem;border-radius:var(--radius);font-size:.85rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;transition:all .18s;white-space:nowrap;cursor:pointer;border:none;font-family:inherit}
+.btn-lg{padding:1rem 2rem;font-size:.9rem}
+.btn-sm{padding:.5rem 1rem;font-size:.75rem}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:var(--shadow)}
+.btn-ghost{border:2px solid rgba(255,255,255,.4);color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.btn-outline{border:2px solid var(--ink);color:var(--ink);background:transparent}
+.btn-outline:hover{background:var(--ink);color:var(--bg)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1EBD5A;transform:translateY(-1px);box-shadow:0 4px 16px rgba(37,211,102,.35)}
+.btn-white{background:#fff;color:var(--accent);font-weight:700}
+.btn-white:hover{background:rgba(255,255,255,.9);transform:translateY(-1px)}
+
+/* ─── Floating WhatsApp ──────────────────────────────────────────────── */
+.wa-float{display:none}
+
+/* ─── Sticky Bottom Bar ──────────────────────────────────────────────── */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--dark);border-top:1px solid rgba(255,255,255,.1);padding:.75rem 1rem;display:flex;gap:.75rem;justify-content:center;box-shadow:0 -4px 24px rgba(0,0,0,.25)}
+.sticky-bar .btn{flex:1;max-width:260px;justify-content:center;padding:.85rem 1rem;font-size:.83rem}
+body{padding-bottom:72px}
+
+/* ─── Navbar ─────────────────────────────────────────────────────────── */
+.navbar{position:sticky;top:0;z-index:100;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.06);padding:.9rem 0}
+.nav-brand{font-family:'DM Serif Display',Georgia,serif;font-size:1.15rem;color:#fff;white-space:nowrap}
+.nav-brand em{color:var(--accent);font-style:normal}
+.nav-tag{font-size:.75rem;color:rgba(255,255,255,.42);letter-spacing:.05em}
+@media(max-width:576px){.nav-tag{display:none!important}}
+
+/* ─── Hero ───────────────────────────────────────────────────────────── */
+.hero{background:linear-gradient(140deg,#1B2A3B 0%,#0E1C2A 100%);color:#fff;padding:5rem 0 4rem;min-height:88vh;display:flex;align-items:center}
+.hero h1{color:#fff;margin:.75rem 0 1.25rem}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.66);max-width:44ch;line-height:1.75;margin-bottom:2rem}
+.hero-trust{font-size:.73rem;color:rgba(255,255,255,.36);letter-spacing:.04em;display:flex;flex-wrap:wrap;gap:.4rem .75rem;align-items:center}
+.hero-dot{display:inline-block;width:3px;height:3px;border-radius:50%;background:var(--accent);opacity:.7}
+
+/* Mosaic grid */
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:8px;height:420px;transform:perspective(800px) rotateY(-5deg) rotateX(2deg);transform-origin:right center}
+@media(max-width:768px){.mosaic{height:220px;transform:none;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr)}}
+.mc{border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);font-size:2rem;padding:.6rem;transition:transform .3s,background .3s;cursor:default}
+.mc:hover{transform:scale(1.05);background:rgba(255,255,255,.1)}
+.mc.mc-hi{background:var(--accent);border-color:transparent}
+.mc-lb{font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center}
+.mc.mc-hi .mc-lb{color:rgba(255,255,255,.85)}
+
+/* ─── Trust bar ──────────────────────────────────────────────────────── */
+.trust-bar{background:var(--dark2);padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.trust-item{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.58);font-size:.78rem}
+.trust-item svg{width:15px;height:15px;flex-shrink:0;color:var(--accent)}
+
+/* ─── Why cards ──────────────────────────────────────────────────────── */
+.why-card{display:flex;flex-direction:column;gap:.7rem}
+.why-icon{width:46px;height:46px;border-radius:var(--radius);background:var(--accent-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{width:22px;height:22px;color:var(--accent)}
+.why-card h3{font-size:.92rem;font-weight:600;margin:0}
+.why-card p{font-size:.83rem;color:var(--ink-muted);line-height:1.65;margin:0}
+
+/* ─── Product cards ──────────────────────────────────────────────────── */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:.75rem;margin-top:2.5rem}
+@media(max-width:440px){.prod-grid{grid-template-columns:repeat(2,1fr)}}
+.prod-card{background:var(--surface);border-radius:var(--radius);padding:1.375rem 1rem 1.125rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;text-align:center;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;cursor:pointer}
+.prod-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.prod-icon{font-size:2.2rem}
+.prod-card h3{font-size:.78rem;font-weight:600;line-height:1.3;margin:0}
+.prod-tag{font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:.28rem .65rem;border:1px solid var(--accent);border-radius:4px;transition:background .15s,color .15s}
+.prod-card:hover .prod-tag{background:var(--accent);color:#fff}
+
+/* ─── Solution cards ─────────────────────────────────────────────────── */
+.sol-card{background:var(--surface);border-radius:var(--radius-lg);padding:1.75rem;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s;height:100%}
+.sol-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.sol-icon{font-size:1.75rem;margin-bottom:.75rem;display:block}
+.sol-card h3{font-size:.92rem;font-weight:600;margin:0 0 .4rem}
+.sol-card p{font-size:.82rem;color:var(--ink-muted);line-height:1.65;margin:0}
+
+/* ─── Personalization section ────────────────────────────────────────── */
+.persona-decoration{position:absolute;top:-200px;right:-200px;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(196,119,58,.13) 0%,transparent 70%);pointer-events:none}
+.tech-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tech-tag{padding:.36rem .8rem;border-radius:999px;font-size:.74rem;font-weight:500;background:rgba(255,255,255,.07);color:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.11)}
+.custom-vis{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:280px}
+.cv-cell{border-radius:var(--radius);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;font-size:2rem}
+.cv-cell.cv-feat{grid-column:span 2;font-size:2.6rem;background:linear-gradient(135deg,rgba(196,119,58,.22),rgba(196,119,58,.06));border-color:rgba(196,119,58,.28)}
+.cv-lbl{font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
+/* ─── Steps ──────────────────────────────────────────────────────────── */
+.step{display:flex;flex-direction:column;gap:.8rem}
+.step-num{width:56px;height:56px;border-radius:var(--radius);background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',Georgia,serif;font-size:1.3rem;flex-shrink:0}
+.step h3{font-size:.86rem;font-weight:600;line-height:1.4;margin:0}
+.step p{font-size:.81rem;color:var(--ink-muted);line-height:1.6;margin:0}
+
+/* ─── CTA section ────────────────────────────────────────────────────── */
+.cta-section{background:var(--accent);color:#fff;text-align:center;padding:5rem 0}
+.cta-section h2{color:#fff;margin-bottom:.75rem}
+.cta-section p{color:rgba(255,255,255,.85);font-size:1rem;max-width:50ch;margin:0 auto 2rem}
+
+/* ─── Form section ───────────────────────────────────────────────────── */
+.form-info h2{margin:.75rem 0 1rem}
+.form-info>p{color:var(--ink-muted);font-size:.93rem;line-height:1.72;margin-bottom:1.5rem}
+.check-list{display:flex;flex-direction:column;gap:.75rem;list-style:none;padding:0;margin:0}
+.check-item{display:flex;align-items:center;gap:.65rem;font-size:.84rem;color:var(--ink-muted)}
+.check-ico{width:24px;height:24px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.check-ico svg{width:12px;height:12px;color:var(--accent)}
+.form-success{display:none;text-align:center;padding:1.5rem 0}
+.form-success.active{display:block}
+.form-success h3{font-size:1.2rem;margin:.75rem 0 .5rem;color:var(--accent)}
+.form-success p{color:var(--ink-muted);margin-bottom:1.5rem;font-size:.9rem}
+
+/* ─── Footer ─────────────────────────────────────────────────────────── */
+.footer{background:var(--dark);color:rgba(255,255,255,.52);padding:3rem 0 1.75rem}
+.footer-logo{font-family:'DM Serif Display',Georgia,serif;font-size:1.2rem;color:#fff;margin-bottom:.75rem}
+.footer-logo em{color:var(--accent);font-style:normal}
+.footer-desc{font-size:.81rem;line-height:1.72;max-width:32ch;margin-bottom:1.25rem;color:rgba(255,255,255,.5)}
+.footer h4{color:rgba(255,255,255,.88);font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.875rem}
+.footer-links{display:flex;flex-direction:column;gap:.45rem}
+.footer-links a{font-size:.81rem;color:rgba(255,255,255,.5);transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.73rem;color:rgba(255,255,255,.26)}
+
+/* ─── Animation ──────────────────────────────────────────────────────── */
+@media(prefers-reduced-motion:no-preference){
+  .fade-up{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+  .fade-up.visible{opacity:1;transform:none}
+}
+</style>
+
+<!-- Sticky Bottom Bar -->
+<div class="sticky-bar">
+  <a href="https://wa.me/5551999999999" class="btn btn-wa" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chamar no WhatsApp
+  </a>
+  <a href="#formulario" class="btn btn-primary">Solicitar Orçamento</a>
+</div>
+
+<!-- Floating WhatsApp (hidden, replaced by sticky bar) -->
+<a href="https://wa.me/5551999999999" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-auto">
+        <a href="#" class="nav-brand">Brindes<em>Corp</em></a>
+      </div>
+      <div class="col">
+        <span class="nav-tag ms-3">Brindes Corporativos Personalizados</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center gap-5 gap-md-0">
+      <div class="col-12 col-md-6">
+        <span class="eyebrow">Brindes Corporativos</span>
+        <h1 class="serif mt-3">Brindes que colocam sua marca em evidência</h1>
+        <p class="hero-sub">Personalize brindes para clientes, colaboradores, eventos e campanhas. Soluções completas para empresas de todo o Brasil.</p>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="#formulario" class="btn btn-primary btn-lg">Solicitar Orçamento</a>
+          <a href="https://wa.me/5551999999999" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span>Atendimento personalizado</span><span class="hero-dot"></span>
+          <span>Soluções para empresas</span><span class="hero-dot"></span>
+          <span>Entrega para todo o Brasil</span>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 pt-5 pt-md-0">
+        <div class="mosaic">
+          <div class="mc mc-hi"><span>💧</span><span class="mc-lb">Garrafas</span></div>
+          <div class="mc"><span>☕</span><span class="mc-lb">Canecas</span></div>
+          <div class="mc"><span>🍷</span><span class="mc-lb">Vinho</span></div>
+          <div class="mc"><span>🎒</span><span class="mc-lb">Mochilas</span></div>
+          <div class="mc"><span>💻</span><span class="mc-lb">Tecnologia</span></div>
+          <div class="mc mc-hi"><span>✨</span><span class="mc-lb">Acessórios</span></div>
+          <div class="mc"><span>🧊</span><span class="mc-lb">Térmicas</span></div>
+          <div class="mc"><span>📋</span><span class="mc-lb">Escritório</span></div>
+          <div class="mc"><span>🐾</span><span class="mc-lb">Pet</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust bar -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="d-flex flex-wrap gap-4 justify-content-center">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Qualidade garantida
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Entrega pontual
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Atendimento personalizado
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        Todo o Brasil
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8">
+        <span class="eyebrow">Por que investir</span>
+        <h2 class="serif mt-3">Brindes que trabalham pela sua marca</h2>
+        <p class="mt-3" style="color:var(--ink-muted);font-size:.95rem">Cada brinde entregue é uma oportunidade de fortalecer relacionamentos e manter sua marca presente no dia a dia.</p>
+      </div>
+    </div>
+    <div class="row mt-5 gap-4 gap-md-0">
+      <div class="col-12 col-md-4 col-lg-4 mb-4 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Fortaleça sua marca</h3>
+          <p>Produtos personalizados com sua identidade visual criam lembrança e reconhecimento junto ao seu público.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 mb-4 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <h3>Valorize clientes e colaboradores</h3>
+          <p>Demonstre cuidado com presentes que geram experiências positivas e fortalecem vínculos duradouros.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 mb-4 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3>Destaque em eventos</h3>
+          <p>Brindes exclusivos transformam a presença da sua empresa em feiras, congressos e eventos do setor.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 mb-4 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+          <h3>Experiências memoráveis</h3>
+          <p>Um bom brinde é associado à sua marca toda vez que é usado — presença constante e positiva.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 mb-4 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <h3>Presença no dia a dia</h3>
+          <p>Garrafas, canecas, mochilas — itens de uso cotidiano que mantêm sua marca visível todos os dias.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8">
+        <span class="eyebrow">Portfólio</span>
+        <h2 class="serif mt-3">Produtos para cada ação</h2>
+        <p class="mt-3" style="color:var(--ink-muted);font-size:.95rem">Centenas de produtos em diversas categorias para atender qualquer necessidade corporativa.</p>
+      </div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card"><div class="prod-icon">💧</div><h3>Garrafas e Squeezes</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">☕</div><h3>Copos e Canecas</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">🍷</div><h3>Vinho e Bar</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">🍳</div><h3>Cozinha</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">🧊</div><h3>Bolsas Térmicas</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">🎒</div><h3>Mochilas e Bolsas</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">💻</div><h3>Tecnologia</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">📋</div><h3>Escritório e Papelaria</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">💚</div><h3>Saúde e Bem-Estar</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">🏠</div><h3>Casa e Utilidades</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">⚽</div><h3>Esporte e Lazer</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">✨</div><h3>Acessórios</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">🚗</div><h3>Automotivo</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">🐾</div><h3>Linha Pet</h3><span class="prod-tag">Ver Produtos</span></div>
+      <div class="prod-card"><div class="prod-icon">📦</div><h3>Embalagens</h3><span class="prod-tag">Ver Produtos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Solutions -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8">
+        <span class="eyebrow">Aplicações</span>
+        <h2 class="serif mt-3">Soluções para sua empresa</h2>
+      </div>
+    </div>
+    <div class="row mt-5 g-3">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sol-card fade-up">
+          <span class="sol-icon">🏛️</span>
+          <h3>Eventos corporativos</h3>
+          <p>Brindes para feiras, congressos, convenções e eventos empresariais. Destaque sua empresa e gere conexões memoráveis.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sol-card fade-up">
+          <span class="sol-icon">🤝</span>
+          <h3>Endomarketing</h3>
+          <p>Presentes para colaboradores, campanhas internas e datas comemorativas. Fortaleça a cultura e o engajamento.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sol-card fade-up">
+          <span class="sol-icon">⭐</span>
+          <h3>Relacionamento com clientes</h3>
+          <p>Produtos personalizados para fortalecer vínculos, gerar lembrança de marca e fidelizar clientes estratégicos.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sol-card fade-up">
+          <span class="sol-icon">📣</span>
+          <h3>Campanhas promocionais</h3>
+          <p>Brindes para ações de marketing, lançamentos e campanhas comerciais que ampliam o alcance da sua marca.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Personalization -->
+<section class="section section-dark position-relative overflow-hidden">
+  <div class="persona-decoration"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center gap-5 gap-md-0">
+      <div class="col-12 col-md-6">
+        <span class="eyebrow">Personalização</span>
+        <h2 class="serif mt-3" style="color:#fff">Sua marca. Seu brinde. Sua identidade.</h2>
+        <p class="mt-4 mb-4" style="color:rgba(255,255,255,.62);font-size:1rem;line-height:1.75">Transformamos produtos em ferramentas de comunicação. Aplicamos sua identidade visual com precisão e qualidade em cada item.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Serigrafia</span>
+          <span class="tech-tag">Gravação a Laser</span>
+          <span class="tech-tag">Bordado</span>
+          <span class="tech-tag">Sublimação</span>
+          <span class="tech-tag">Tampografia</span>
+          <span class="tech-tag">UV Digital</span>
+          <span class="tech-tag">Transfer</span>
+          <span class="tech-tag">Etiquetas</span>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 pt-5 pt-md-0">
+        <div class="custom-vis">
+          <div class="cv-cell cv-feat"><span>🎨</span><span class="cv-lbl">Sua identidade em cada detalhe</span></div>
+          <div class="cv-cell"><span>🏷️</span><span class="cv-lbl">Logo aplicada</span></div>
+          <div class="cv-cell"><span>✅</span><span class="cv-lbl">Arte aprovada</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-8">
+        <span class="eyebrow">Processo</span>
+        <h2 class="serif mt-3">Como funciona</h2>
+        <p class="mt-3" style="color:var(--ink-muted);font-size:.95rem">Do primeiro contato à entrega, cuidamos de cada etapa para você receber exatamente o que precisa.</p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="step fade-up">
+          <div class="step-num">1</div>
+          <h3>Conte o que sua empresa precisa</h3>
+          <p>Entre em contato pelo WhatsApp ou formulário. Vamos entender necessidade, prazo e orçamento.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="step fade-up">
+          <div class="step-num">2</div>
+          <h3>Escolha os produtos</h3>
+          <p>Apresentamos opções alinhadas ao seu objetivo, público e identidade visual da empresa.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="step fade-up">
+          <div class="step-num">3</div>
+          <h3>Personalizamos com sua marca</h3>
+          <p>Nossa equipe aplica sua identidade visual com a técnica mais adequada para cada produto.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="step fade-up">
+          <div class="step-num">4</div>
+          <h3>Receba seus brindes</h3>
+          <p>Entregamos em qualquer lugar do Brasil, com rastreamento e suporte até a entrega final.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <span class="eyebrow" style="color:rgba(255,255,255,.65)">Pronto para começar?</span>
+    <h2 class="serif mt-3">Precisa de brindes para sua empresa?</h2>
+    <p>Envie sua necessidade e nossa equipe ajudará você a encontrar as melhores opções para sua ação.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="#formulario" class="btn btn-white btn-lg">Quero Solicitar um Orçamento</a>
+      <a href="https://wa.me/5551999999999" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="section section-alt" id="formulario">
+  <div class="container">
+    <div class="row gap-5 gap-md-0">
+      <div class="col-12 col-md-5 form-info">
+        <span class="eyebrow">Orçamento</span>
+        <h2 class="serif">Fale com nossa equipe</h2>
+        <p>Preencha o formulário e nossa equipe entrará em contato rapidamente com as melhores opções para sua empresa.</p>
+        <ul class="check-list">
+          <li class="check-item">
+            <div class="check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Retorno em até 1 hora em horário comercial
+          </li>
+          <li class="check-item">
+            <div class="check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Orçamento sem compromisso
+          </li>
+          <li class="check-item">
+            <div class="check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Atendimento personalizado para sua necessidade
+          </li>
+          <li class="check-item">
+            <div class="check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Entrega para todo o Brasil
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-7 offset-md-0 col-lg-6 offset-lg-1">
+        <div class="card shadow">
+          <div class="card-body">
+            <form id="qForm" onsubmit="handleSub(event)">
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="nome">Nome *</label>
+                  <input type="text" id="nome" class="form-control" required placeholder="Seu nome">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="empresa">Empresa *</label>
+                  <input type="text" id="empresa" class="form-control" required placeholder="Nome da empresa">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="wa">WhatsApp *</label>
+                  <input type="tel" id="wa" class="form-control" required placeholder="(51) 99999-9999">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="email">E-mail</label>
+                  <input type="email" id="email" class="form-control" placeholder="seu@email.com.br">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="qtd">Quantidade aproximada</label>
+                  <select id="qtd" class="form-select">
+                    <option value="">Selecione uma faixa</option>
+                    <option>Até 50 unidades</option>
+                    <option>50 a 100 unidades</option>
+                    <option>100 a 500 unidades</option>
+                    <option>500 a 1.000 unidades</option>
+                    <option>Acima de 1.000 unidades</option>
+                    <option>Ainda não sei</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="msg">O que você procura? *</label>
+                  <textarea id="msg" class="form-control" required placeholder="Descreva o produto, ação ou evento. Quanto mais detalhes, melhor!"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg w-100 justify-content-center">Receber Orçamento</button>
+                </div>
+              </div>
+            </form>
+            <div class="form-success" id="fOk">
+              <div style="font-size:3rem">✅</div>
+              <h3>Mensagem enviada!</h3>
+              <p>Nossa equipe entrará em contato em breve. Você também pode nos chamar diretamente pelo WhatsApp.</p>
+              <a href="https://wa.me/5551999999999" class="btn btn-wa btn-lg mx-auto" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 col-md-5 col-lg-5 mb-4 mb-md-0">
+        <div class="footer-logo">Brindes<em>Corp</em></div>
+        <p class="footer-desc">Brindes corporativos personalizados para empresas de todo o Brasil.</p>
+        <a href="https://wa.me/5551999999999" class="btn btn-wa btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 mb-4 mb-md-0 offset-md-1">
+        <h4>Contato</h4>
+        <div class="footer-links">
+          <a href="https://wa.me/5551999999999">📱 (51) 99999-9999</a>
+          <a href="tel:5133333333">📞 (51) 3333-3333</a>
+          <a href="mailto:contato@email.com.br">✉️ contato@email.com.br</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3">
+        <h4>Redes sociais</h4>
+        <div class="footer-links">
+          <a href="#">📸 Instagram</a>
+          <a href="#">👤 Facebook</a>
+          <a href="#">💼 LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BrindesCorp — Brindes Corporativos Personalizados</span>
+      <span>Atendimento para todo o Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleSub(e) {
+  e.preventDefault();
+  var nome = document.getElementById('nome').value;
+  var empresa = document.getElementById('empresa').value;
+  var qtd = document.getElementById('qtd').value;
+  var msg = document.getElementById('msg').value;
+  document.getElementById('qForm').style.display = 'none';
+  document.getElementById('fOk').classList.add('active');
+  var text = encodeURIComponent('Olá! Gostaria de um orçamento.\n\n*Nome:* ' + nome + '\n*Empresa:* ' + empresa + '\n*Quantidade:* ' + (qtd || 'Não informado') + '\n*Necessidade:* ' + msg);
+  setTimeout(function(){ window.open('https://wa.me/5551999999999?text=' + text, '_blank'); }, 1800);
+}
+
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(function(el){ obs.observe(el); });
+</script>

@@ -1,627 +1,370 @@
 <title>Marca Gaúcha</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 
 <style>
-/* ── Bootstrap Grid (inline, CSP-safe) ──────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box}
-.container{width:100%;max-width:1160px;padding-right:1.5rem;padding-left:1.5rem;margin-right:auto;margin-left:auto}
-.row{display:flex;flex-wrap:wrap;margin-right:-.75rem;margin-left:-.75rem}
-.row>*{padding-right:.75rem;padding-left:.75rem;flex-shrink:0;width:100%;max-width:100%}
-.col{flex:1 0 0%}.col-12{flex:0 0 auto;width:100%}.col-6{flex:0 0 auto;width:50%}.col-auto{flex:0 0 auto;width:auto}
-@media(min-width:576px){.col-sm-6{flex:0 0 auto;width:50%}.col-sm-4{flex:0 0 auto;width:33.3333%}.col-sm-3{flex:0 0 auto;width:25%}}
-@media(min-width:768px){.col-md-8{flex:0 0 auto;width:66.6666%}.col-md-6{flex:0 0 auto;width:50%}.col-md-5{flex:0 0 auto;width:41.6666%}.col-md-4{flex:0 0 auto;width:33.3333%}.col-md-3{flex:0 0 auto;width:25%}.col-md-auto{flex:0 0 auto;width:auto}.d-md-flex{display:flex!important}.d-md-none{display:none!important}.d-md-block{display:block!important}}
-@media(min-width:992px){.col-lg-7{flex:0 0 auto;width:58.3333%}.col-lg-6{flex:0 0 auto;width:50%}.col-lg-5{flex:0 0 auto;width:41.6666%}.col-lg-4{flex:0 0 auto;width:33.3333%}.col-lg-3{flex:0 0 auto;width:25%}.col-lg-2{flex:0 0 auto;width:16.6666%}}
-.d-flex{display:flex!important}.d-block{display:block!important}.d-none{display:none!important}
-.align-items-center{align-items:center!important}.align-items-start{align-items:flex-start!important}
-.justify-content-center{justify-content:center!important}.justify-content-between{justify-content:space-between!important}.justify-content-end{justify-content:flex-end!important}
-.flex-wrap{flex-wrap:wrap!important}.flex-column{flex-direction:column!important}
-.text-center{text-align:center!important}.w-100{width:100%!important}.ms-auto{margin-left:auto!important}
-.gap-1{gap:.25rem!important}.gap-2{gap:.5rem!important}.gap-3{gap:1rem!important}.gap-4{gap:1.5rem!important}.gap-5{gap:3rem!important}
-.mt-0{margin-top:0!important}.mt-2{margin-top:.5rem!important}.mt-3{margin-top:1rem!important}.mt-4{margin-top:1.5rem!important}.mt-5{margin-top:3rem!important}
-.mb-0{margin-bottom:0!important}.mb-2{margin-bottom:.5rem!important}.mb-3{margin-bottom:1rem!important}.mb-4{margin-bottom:1.5rem!important}.mb-5{margin-bottom:3rem!important}
-.mx-auto{margin-left:auto!important;margin-right:auto!important}
-.p-4{padding:1.5rem!important}.py-5{padding-top:3rem!important;padding-bottom:3rem!important}
-.position-relative{position:relative!important}.position-sticky{position:sticky!important}.overflow-hidden{overflow:hidden!important}
-.top-0{top:0!important}.z-100{z-index:100!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:#ffffff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:68px}
+a{color:inherit;text-decoration:none}
+p{margin:0}
+img{max-width:100%;display:block}
 
-/* ── Tokens ─────────────────────────────────────────────────────────── */
+/* Grid */
+.container{width:100%;max-width:1140px;padding:0 1.5rem;margin:0 auto}
+.row{display:flex;flex-wrap:wrap;margin:0 -.75rem}
+.row>*{padding:0 .75rem;width:100%}
+@media(min-width:576px){.col-sm-6{width:50%}}
+@media(min-width:768px){.col-md-4{width:33.333%}.col-md-6{width:50%}.col-md-8{width:66.666%}.col-md-5{width:41.666%}.col-md-7{width:58.333%}}
+@media(min-width:992px){.col-lg-3{width:25%}.col-lg-4{width:33.333%}.col-lg-6{width:50%}}
+
+/* Tokens */
 :root{
-  --bg:#FFFFFF;--surface:#FFFFFF;--surface2:#F5F5F5;
-  --ink:#000000;--ink-2:#0A0A0A;--ink-muted:#111111;--ink-light:#444444;
-  --red:#CC1F1F;--red-h:#B01A1A;--red-pale:rgba(204,31,31,0.07);
-  --border:#E5E5E5;--border-2:#D0D0D0;
-  --dark:#0A0A0A;--dark2:#141414;
-  --radius:8px;--radius-lg:14px;--radius-xl:20px;
-  --shadow:0 1px 8px rgba(0,0,0,0.07);--shadow-md:0 4px 20px rgba(0,0,0,0.09);--shadow-lg:0 8px 40px rgba(0,0,0,0.12)
+  --red:#CC1F1F;--red-h:#B01A1A;
+  --border:#E5E5E5;--border-2:#CECECE;
+  --surface:#F7F7F7;--surface2:#EFEFEF;
+  --ink:#0a0a0a;--ink-2:#222222;--ink-muted:#555555;--ink-light:#888888;
+  --radius:8px;--radius-lg:12px;--radius-xl:18px;
+  --shadow:0 1px 6px rgba(0,0,0,.07);--shadow-md:0 4px 18px rgba(0,0,0,.09);--shadow-lg:0 8px 36px rgba(0,0,0,.12)
 }
 
+/* Typography */
+.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);display:block;margin-bottom:.75rem}
+.h-hero{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:var(--ink);text-wrap:balance}
+.h-section{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.12;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
+.lead{font-size:1rem;color:var(--ink-muted);line-height:1.75}
 
-/* ── Base ───────────────────────────────────────────────────────────── */
-html{scroll-behavior:smooth}
-body{margin:0;background:#ffffff;color:#000000;font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:72px}
-a{color:inherit;text-decoration:none}
-img{max-width:100%}
-p{margin:0}
+/* Sections */
+.section{padding:5rem 0}
+.section-alt{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 
-/* ── Typography ─────────────────────────────────────────────────────── */
-.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:.75rem}
-.h-display{font-size:clamp(2.4rem,5vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;color:var(--ink);text-wrap:balance}
-.h-section{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
-.h-card{font-size:1rem;font-weight:700;color:var(--ink);margin:0 0 .4rem}
-.red{color:var(--ink)}
-.lead{font-size:1.05rem;color:var(--ink-muted);line-height:1.75;max-width:54ch}
-
-/* ── Section ────────────────────────────────────────────────────────── */
-.section{padding:6rem 0}
-.section-sm{padding:4rem 0}
-.section-dark{background:var(--dark);color:#fff}
-.section-surface{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.divider{border:none;border-top:1px solid var(--border);margin:0}
-
-/* ── Buttons ────────────────────────────────────────────────────────── */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:var(--radius);transition:all .16s;cursor:pointer;border:none;white-space:nowrap;padding:.85rem 1.75rem}
-.btn-lg{padding:1rem 2.2rem;font-size:.88rem}
-.btn-red{background:var(--red);color:#ffffff!important}
-.btn-red:hover{background:var(--red-h);transform:translateY(-1px);box-shadow:0 6px 20px rgba(204,31,31,.28)}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--radius);border:none;cursor:pointer;transition:all .16s;white-space:nowrap;padding:.875rem 1.75rem}
+.btn-lg{padding:1.05rem 2.25rem;font-size:.88rem}
+.btn-red{background:var(--red);color:#ffffff}
+.btn-red:hover{background:var(--red-h);transform:translateY(-1px);box-shadow:0 6px 22px rgba(204,31,31,.28)}
+.btn-wa{background:#25D366;color:#ffffff}
+.btn-wa:hover{background:#1ebe5c;transform:translateY(-1px)}
 .btn-outline{background:transparent;border:1.5px solid var(--border-2);color:var(--ink)}
 .btn-outline:hover{border-color:var(--ink);background:var(--ink);color:#fff}
-.btn-outline-white{background:transparent;border:1.5px solid rgba(255,255,255,.3);color:#fff}
-.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn-wa{background:#25D366;color:#fff}
-.btn-wa:hover{background:#1EBD5A;transform:translateY(-1px)}
 
-/* ── Sticky bar ─────────────────────────────────────────────────────── */
-.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:#fff;border-top:1px solid var(--border);padding:.75rem 1.25rem;display:flex;gap:.625rem;justify-content:center;box-shadow:0 -2px 16px rgba(0,0,0,.08)}
-.sticky-bar .btn{flex:1;max-width:230px;height:46px;font-size:.78rem}
+/* Sticky bar */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:#fff;border-top:1px solid var(--border);padding:.7rem 1.25rem;display:flex;gap:.625rem;justify-content:center;box-shadow:0 -2px 14px rgba(0,0,0,.08)}
+.sticky-bar .btn{flex:1;max-width:240px;height:44px;font-size:.77rem}
 
-/* ── Header ─────────────────────────────────────────────────────────── */
-.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.header-inner{display:flex;align-items:center;padding:.875rem 0;gap:2rem}
-.logo{font-size:1.05rem;font-weight:800;color:var(--ink);letter-spacing:-.02em;white-space:nowrap}
-.logo em{color:var(--ink);font-style:normal}
-.nav-links{display:flex;align-items:center;gap:1.75rem;flex:1;justify-content:center}
-.nav-links a{font-size:.8rem;font-weight:500;color:var(--ink-muted);transition:color .15s;white-space:nowrap}
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.875rem 0}
+.logo{font-size:1.05rem;font-weight:900;color:var(--ink);letter-spacing:-.02em}
+.nav-links{display:flex;gap:1.75rem}
+.nav-links a{font-size:.8rem;font-weight:500;color:var(--ink-muted)}
 .nav-links a:hover{color:var(--ink)}
-@media(max-width:768px){.nav-links{display:none}}
+@media(max-width:767px){.nav-links{display:none}}
 
-/* ── Hero ───────────────────────────────────────────────────────────── */
-.hero{padding:6rem 0 5rem;border-bottom:1px solid var(--border)}
-.hero-text{max-width:560px}
-.hero-text .lead{margin-top:1.25rem;margin-bottom:2rem}
+/* ── 1. HERO ─────────────────────────────────────────────── */
+.hero{padding:5.5rem 0 5rem;border-bottom:1px solid var(--border)}
+.hero-subtitle{font-size:1rem;color:var(--ink-muted);line-height:1.75;max-width:52ch;margin:1.25rem 0 2.25rem}
+.hero-cta-group{display:flex;flex-wrap:wrap;gap:.875rem;align-items:center}
+.hero-trust{display:flex;align-items:center;gap:.6rem;margin-top:2rem;flex-wrap:wrap}
+.hero-trust-badge{display:flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:500;color:var(--ink-muted)}
+.hero-trust-dot{width:5px;height:5px;border-radius:50%;background:var(--border-2)}
 
-/* Hero visual mockup */
-.hero-visual{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:1.5rem;box-shadow:var(--shadow-lg)}
-.mock-header{display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
-.mock-dot{width:10px;height:10px;border-radius:50%}
-.mock-title{font-size:.75rem;font-weight:600;color:var(--ink-muted);margin-left:.25rem}
-.mock-stats{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1rem}
-.mock-stat{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:.875rem 1rem}
-.mock-stat-label{font-size:.65rem;font-weight:600;color:var(--ink-light);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem}
-.mock-stat-value{font-size:1.4rem;font-weight:800;color:var(--ink);letter-spacing:-.02em}
-.mock-stat-value.red{color:var(--ink)}
-.mock-bar-row{display:flex;flex-direction:column;gap:.5rem}
-.mock-bar-label{display:flex;justify-content:space-between;font-size:.68rem;font-weight:500;color:var(--ink-muted)}
-.mock-bar-track{height:6px;background:var(--border);border-radius:99px;overflow:hidden}
-.mock-bar-fill{height:100%;border-radius:99px;background:var(--ink)}
-.mock-bar-fill.red{background:var(--ink)}
-.mock-tags{display:flex;flex-wrap:wrap;gap:.375rem;margin-top:1rem}
-.mock-tag{font-size:.65rem;font-weight:600;padding:.28rem .7rem;border-radius:99px;background:var(--surface2);color:var(--ink-muted);border:1px solid var(--border)}
-.mock-tag.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* ── 2. BENEFÍCIOS ───────────────────────────────────────── */
+.benefit-card{display:flex;flex-direction:column;gap:.625rem;padding:1.75rem;border:1px solid var(--border);border-radius:var(--radius-lg);height:100%;transition:border-color .18s,box-shadow .18s}
+.benefit-card:hover{border-color:var(--ink);box-shadow:var(--shadow)}
+.benefit-icon{width:42px;height:42px;border-radius:var(--radius);background:var(--surface2);display:flex;align-items:center;justify-content:center;margin-bottom:.25rem}
+.benefit-icon svg{width:20px;height:20px;color:var(--ink)}
+.benefit-card h3{font-size:.95rem;font-weight:700;margin:0}
+.benefit-card p{font-size:.84rem;color:var(--ink-muted);line-height:1.65;margin:0}
 
-/* ── Problem cards ──────────────────────────────────────────────────── */
-.problem-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;transition:border-color .18s,box-shadow .18s}
-.problem-card:hover{border-color:var(--ink);box-shadow:var(--shadow-md)}
-.problem-icon{width:44px;height:44px;border-radius:var(--radius);background:var(--surface2);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
-.problem-icon svg{width:22px;height:22px;color:var(--ink)}
-.problem-card h3{font-size:.95rem;font-weight:700;margin:0 0 .5rem;color:var(--ink)}
-.problem-card p{font-size:.84rem;color:var(--ink-muted);line-height:1.65}
+/* ── 3. PRODUTOS ─────────────────────────────────────────── */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem}
+.cat-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .18s,border-color .18s;background:#fff}
+.cat-card:hover{box-shadow:var(--shadow-md);border-color:var(--border-2)}
+.cat-img{height:160px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:3rem;border-bottom:1px solid var(--border)}
+.cat-body{padding:1rem 1.125rem}
+.cat-title{font-size:.9rem;font-weight:700;margin:0 0 .3rem}
+.cat-desc{font-size:.78rem;color:var(--ink-muted);margin:0;line-height:1.55}
+.cat-tag{display:inline-block;font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink);background:var(--surface2);border:1px solid var(--border);padding:.18rem .6rem;border-radius:99px;margin-top:.75rem}
 
-/* ── Solution cards ─────────────────────────────────────────────────── */
-.sol-card{border-radius:var(--radius-lg);padding:1.875rem;border:1px solid var(--border);background:var(--bg);transition:box-shadow .18s,border-color .18s;height:100%}
-.sol-card:hover{box-shadow:var(--shadow-md);border-color:var(--border-2)}
-.sol-card-icon{width:48px;height:48px;border-radius:var(--radius);background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
-.sol-card-icon svg{width:24px;height:24px;color:#fff}
-.sol-card h3{font-size:1rem;font-weight:700;margin:0 0 .5rem}
-.sol-card p{font-size:.84rem;color:var(--ink-muted);line-height:1.65;margin:0}
-.sol-card-badge{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--surface2);padding:.22rem .65rem;border-radius:99px;margin-top:.875rem;border:1px solid var(--border-2)}
+/* ── 4. PROVA SOCIAL ─────────────────────────────────────── */
+.partners-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:4rem}
+.partner-badge{height:52px;padding:0 1.5rem;border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--ink-muted);letter-spacing:.03em;background:#fff;min-width:120px}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+.testi-card{border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.625rem;background:#fff}
+.testi-stars{display:flex;gap:2px;margin-bottom:.875rem}
+.star{width:13px;height:13px;fill:var(--ink);color:var(--ink)}
+.testi-quote{font-size:.88rem;color:var(--ink-2);line-height:1.75;font-style:italic;margin-bottom:1rem}
+.testi-author{display:flex;align-items:center;gap:.75rem;padding-top:.875rem;border-top:1px solid var(--border)}
+.testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.testi-name{font-size:.83rem;font-weight:700;margin:0}
+.testi-role{font-size:.72rem;color:var(--ink-muted);margin:0}
 
-/* ── Benefits ───────────────────────────────────────────────────────── */
-.benefit-item{display:flex;flex-direction:column;gap:.5rem;padding:1.5rem;border-radius:var(--radius-lg);border:1px solid var(--border);background:var(--bg);transition:border-color .18s}
-.benefit-item:hover{border-color:var(--ink)}
-.benefit-num{font-size:2rem;font-weight:900;color:var(--ink);letter-spacing:-.04em;line-height:1}
-.benefit-item h3{font-size:.9rem;font-weight:700;margin:0}
-.benefit-item p{font-size:.82rem;color:var(--ink-muted);line-height:1.6;margin:0}
+/* ── 5. FORMULÁRIO ───────────────────────────────────────── */
+.form-wrap{background:#fff;border:1px solid var(--border);border-radius:var(--radius-xl);padding:2.25rem;box-shadow:var(--shadow-md)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:576px){.form-row{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.form-label{font-size:.73rem;font-weight:700;letter-spacing:.03em;color:var(--ink)}
+.form-input{display:block;width:100%;padding:.72rem 1rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;transition:border-color .15s}
+.form-input:focus{border-color:var(--ink)}
+.form-input::placeholder{color:var(--ink-light)}
+select.form-input{-webkit-appearance:none;appearance:none;cursor:pointer}
+textarea.form-input{resize:vertical;min-height:80px}
 
-/* ── How it works ───────────────────────────────────────────────────── */
-.step-block{display:flex;gap:1.5rem;align-items:flex-start}
-.step-num-big{font-size:3rem;font-weight:900;color:var(--ink);line-height:1;letter-spacing:-.04em;min-width:64px;padding-top:.1rem}
-.step-content h3{font-size:1rem;font-weight:700;margin:0 0 .4rem}
-.step-content p{font-size:.86rem;color:var(--ink-muted);line-height:1.65;margin:0}
-.step-line{width:1px;background:var(--border);flex-shrink:0;margin:0 2rem;align-self:stretch}
-@media(max-width:768px){.step-line{display:none}}
+/* Footer */
+.footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5rem 0 1.75rem}
+.footer-inner{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
+.footer-logo{font-size:1rem;font-weight:900;color:var(--ink);margin-bottom:.4rem}
+.footer-tagline{font-size:.78rem;color:var(--ink-muted)}
+.footer-contacts{display:flex;flex-direction:column;gap:.4rem}
+.footer-contacts a{font-size:.8rem;color:var(--ink-muted)}
+.footer-contacts a:hover{color:var(--ink)}
+.footer-copy{font-size:.72rem;color:var(--ink-light);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
 
-/* ── Alternating services ───────────────────────────────────────────── */
-.service-block{padding:4rem 0;border-bottom:1px solid var(--border)}
-.service-block:last-child{border-bottom:none}
-.service-visual{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:2rem;display:flex;flex-direction:column;gap:1rem;min-height:220px;justify-content:center}
-.service-visual-icon{font-size:2.5rem;margin-bottom:.5rem}
-.service-list{display:flex;flex-direction:column;gap:.6rem;margin-top:.75rem}
-.service-list-item{display:flex;align-items:center;gap:.6rem;font-size:.84rem;color:var(--ink-muted)}
-.service-list-item::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--ink);flex-shrink:0}
-
-/* ── Stats ──────────────────────────────────────────────────────────── */
-.stat-item{text-align:center;padding:2rem 1rem}
-.stat-num{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;letter-spacing:-.04em;color:var(--ink);line-height:1}
-.stat-num span{color:var(--ink)}
-.stat-label{font-size:.8rem;font-weight:500;color:var(--ink-muted);margin-top:.5rem;line-height:1.4}
-
-/* ── Testimonials ───────────────────────────────────────────────────── */
-.testimonial-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.875rem;height:100%}
-.testimonial-stars{display:flex;gap:.2rem;margin-bottom:1rem}
-.testimonial-star{width:14px;height:14px;color:var(--ink);fill:var(--ink)}
-.testimonial-text{font-size:.88rem;color:var(--ink-2);line-height:1.75;font-style:italic;margin-bottom:1.25rem}
-.testimonial-result{font-size:.75rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.07em;background:var(--surface2);border:1px solid var(--border-2);padding:.28rem .75rem;border-radius:99px;display:inline-block;margin-bottom:1.25rem}
-.testimonial-author{display:flex;align-items:center;gap:.875rem;padding-top:1rem;border-top:1px solid var(--border)}
-.avatar{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;flex-shrink:0}
-.author-name{font-size:.84rem;font-weight:700;margin:0}
-.author-company{font-size:.75rem;color:var(--ink-muted);margin:0}
-
-/* ── Differentials ──────────────────────────────────────────────────── */
-.diff-item{display:flex;flex-direction:column;gap:.75rem;padding:1.5rem;border-left:2px solid var(--border-2);margin-bottom:1.5rem}
-.diff-icon{width:36px;height:36px;border-radius:var(--radius);background:var(--surface2);display:flex;align-items:center;justify-content:center}
-.diff-icon svg{width:18px;height:18px;color:var(--ink)}
-.diff-item h3{font-size:.95rem;font-weight:700;margin:0}
-.diff-item p{font-size:.84rem;color:var(--ink-muted);line-height:1.6;margin:0}
-
-/* ── FAQ ────────────────────────────────────────────────────────────── */
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-btn{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;color:var(--ink);cursor:pointer;text-align:left;gap:1rem}
-.faq-icon{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border-2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .18s}
-.faq-icon svg{width:12px;height:12px;color:var(--ink-muted);transition:transform .18s}
-.faq-item.open .faq-icon{background:var(--ink);border-color:var(--ink)}
-.faq-item.open .faq-icon svg{color:#fff;transform:rotate(45deg)}
-.faq-answer{font-size:.88rem;color:var(--ink-muted);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
-.faq-item.open .faq-answer{max-height:300px;padding-bottom:1.25rem}
-
-/* ── CTA final ──────────────────────────────────────────────────────── */
-.cta-final{background:var(--surface);color:var(--ink);text-align:center;padding:7rem 0;border-top:1px solid var(--border)}
-.cta-final .h-section{color:var(--ink)}
-.cta-final .lead{color:var(--ink-muted);margin:1.25rem auto 2.5rem}
-.cta-fine-print{font-size:.75rem;color:var(--ink-light);margin-top:1.25rem}
-
-/* ── Footer ─────────────────────────────────────────────────────────── */
-.footer{background:var(--bg);color:var(--ink-muted);padding:3rem 0 2rem;border-top:1px solid var(--border)}
-.footer-logo{font-size:1.05rem;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:.6rem}
-.footer-logo em{color:var(--ink);font-style:normal}
-.footer-desc{font-size:.8rem;line-height:1.7;max-width:30ch;margin-bottom:1.25rem;color:var(--ink-muted)}
-.footer h4{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:.875rem}
-.footer-links{display:flex;flex-direction:column;gap:.5rem}
-.footer-links a{font-size:.8rem;color:var(--ink-muted);transition:color .15s}
-.footer-links a:hover{color:var(--ink)}
-.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.72rem;color:var(--ink-light);margin-top:2.5rem}
-.footer-bottom a{color:var(--ink-light)}
-
-/* ── Animations ─────────────────────────────────────────────────────── */
+/* Fade in */
 @media(prefers-reduced-motion:no-preference){
-  .fade-up{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
-  .fade-up.visible{opacity:1;transform:none}
+  .fade{opacity:0;transform:translateY(18px);transition:opacity .45s,transform .45s}
+  .fade.in{opacity:1;transform:none}
 }
 </style>
 
-<!-- Sticky Bottom Bar -->
+<!-- Sticky Bar -->
 <div class="sticky-bar">
-  <a href="https://wa.me/5551999999999" class="btn btn-wa" target="_blank" rel="noopener">
+  <a href="https://wa.me/5551999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20brindes%20corporativos!" class="btn btn-wa" target="_blank" rel="noopener">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
+    Chamar no WhatsApp
   </a>
+  <a href="#orcamento" class="btn btn-red">Pedir Orçamento</a>
 </div>
 
-<!-- ── 1. HEADER ──────────────────────────────────────────────────────── -->
+<!-- ── HEADER ───────────────────────────────────────────────── -->
 <header class="site-header">
   <div class="container">
     <div class="header-inner">
-      <a href="#" class="logo">Marca <em>Gaúcha</em></a>
+      <a href="#" class="logo">Marca Gaúcha</a>
       <nav class="nav-links">
-        <a href="#solucao">Solução</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#resultados">Resultados</a>
-        <a href="#faq">FAQ</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#orcamento">Orçamento</a>
       </nav>
+      <a href="https://wa.me/5551999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!" class="btn btn-wa" target="_blank" rel="noopener" style="font-size:.75rem;padding:.6rem 1.1rem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
     </div>
   </div>
 </header>
 
-<!-- ── 2. HERO ────────────────────────────────────────────────────────── -->
+<!-- ── 1. HERO ───────────────────────────────────────────────── -->
 <section class="hero">
   <div class="container">
-    <div class="row align-items-center gap-5 gap-md-0">
-      <div class="col-12 col-md-6">
-        <div class="hero-text">
-          <span class="eyebrow">Brindes Corporativos Personalizados</span>
-          <h1 class="h-display">Transforme sua marca em <span class="red">presença real</span> no dia a dia dos seus clientes.</h1>
-          <p class="lead">A Marca Gaúcha cria brindes corporativos personalizados para empresas que querem fortalecer relacionamentos, aumentar visibilidade e gerar resultados concretos com cada entrega.</p>
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="#solucao" class="btn btn-outline btn-lg">Conhecer a Solução</a>
+    <div style="max-width:680px">
+      <span class="eyebrow">Brindes Corporativos Personalizados · Entrega para todo o Brasil</span>
+      <h1 class="h-hero">Brindes Personalizados que Fortalecem a sua Marca e Impressionam Clientes.</h1>
+      <p class="hero-subtitle">Atendemos pedidos em grandes quantidades com entrega rápida para todo o Brasil e personalização em alta definição — serigrafia, laser, bordado e muito mais.</p>
+      <div class="hero-cta-group">
+        <a href="https://wa.me/5551999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20brindes%20corporativos!" class="btn btn-red btn-lg" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir Orçamento Rápido via WhatsApp
+        </a>
+        <a href="#orcamento" class="btn btn-outline btn-lg">Ver formulário</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          +100 empresas atendidas
+        </span>
+        <span class="hero-trust-dot"></span>
+        <span class="hero-trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Entrega em todo o Brasil
+        </span>
+        <span class="hero-trust-dot"></span>
+        <span class="hero-trust-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Resposta em até 1h
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. BENEFÍCIOS ────────────────────────────────────────── -->
+<section class="section" id="beneficios">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem">
+      <span class="eyebrow">Por que nos escolher?</span>
+      <h2 class="h-section">Tudo que sua empresa precisa em um só lugar</h2>
+    </div>
+    <div class="row" style="gap:0">
+      <div class="col-md-4" style="padding-bottom:1.25rem">
+        <div class="benefit-card fade">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
           </div>
+          <h3>Personalização exclusiva</h3>
+          <p>Sua logo aplicada com acabamento profissional em serigrafia, laser, bordado, sublimação e UV digital — fiel à sua identidade visual.</p>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding-bottom:1.25rem">
+        <div class="benefit-card fade">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Preço para atacado</h3>
+          <p>Condições especiais para grandes volumes e empresas. Quanto maior o pedido, melhor o custo — sem abrir mão da qualidade.</p>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding-bottom:1.25rem">
+        <div class="benefit-card fade">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Pontualidade na entrega</h3>
+          <p>Compromisso real com prazos de eventos e campanhas. Logística rastreada do início ao fim, com suporte até a confirmação da entrega.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── 3. PROBLEMA ────────────────────────────────────────────────────── -->
-<section class="section section-surface">
+<!-- ── 3. PRODUTOS ──────────────────────────────────────────── -->
+<section class="section section-alt" id="produtos">
   <div class="container">
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-12 col-md-8">
-        <span class="eyebrow">O Problema</span>
-        <h2 class="h-section">Sua empresa ainda perde tempo e oportunidades com processos que poderiam ser melhores?</h2>
+    <div style="text-align:center;margin-bottom:3rem">
+      <span class="eyebrow">Vitrine de Produtos</span>
+      <h2 class="h-section">Itens mais pedidos por categoria</h2>
+      <p class="lead" style="max-width:52ch;margin:.875rem auto 0">Produtos de alta qualidade, prontos para receber a sua marca. Solicite amostras antes de fechar o pedido.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card fade">
+        <div class="cat-img">🎁</div>
+        <div class="cat-body">
+          <p class="cat-title">Kits Boas-Vindas</p>
+          <p class="cat-desc">Conjuntos personalizados para receber novos colaboradores, clientes VIP ou presentear em datas especiais.</p>
+          <span class="cat-tag">Onboarding · RH · VIP</span>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🌿</div>
+        <div class="cat-body">
+          <p class="cat-title">Linha Eco-Friendly</p>
+          <p class="cat-desc">Squeezes, sacolas retornáveis, canecas e itens sustentáveis que reforçam os valores da sua empresa.</p>
+          <span class="cat-tag">Sustentável · ESG</span>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">💻</div>
+        <div class="cat-body">
+          <p class="cat-title">Eletrônicos & Tecnologia</p>
+          <p class="cat-desc">Fones, hubs USB, carregadores wireless, power banks e acessórios tech que encantam qualquer público.</p>
+          <span class="cat-tag">Tech · Premium</span>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">✏️</div>
+        <div class="cat-body">
+          <p class="cat-title">Escritório & Papelaria</p>
+          <p class="cat-desc">Canetas, cadernos, organizadores, mochilas e itens de uso diário que mantêm sua marca presente no trabalho.</p>
+          <span class="cat-tag">Cotidiano · Alta Rotatividade</span>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">👕</div>
+        <div class="cat-body">
+          <p class="cat-title">Vestuário & Uniformes</p>
+          <p class="cat-desc">Camisetas, bonés, jaquetas e polos bordadas que transformam sua equipe em embaixadores da marca.</p>
+          <span class="cat-tag">Bordado · Serigrafia</span>
+        </div>
+      </div>
+      <div class="cat-card fade">
+        <div class="cat-img">🏆</div>
+        <div class="cat-body">
+          <p class="cat-title">Linha Premium & Eventos</p>
+          <p class="cat-desc">Presentes executivos, garrafas inox, vinhos e kits exclusivos para impressionar clientes e parceiros estratégicos.</p>
+          <span class="cat-tag">Alto Padrão · Eventos</span>
+        </div>
       </div>
     </div>
-    <div class="row gap-3 gap-md-0">
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <h3>Processos manuais e demorados</h3>
-          <p>Pedidos feitos por mensagem, planilha ou e-mail geram erros, retrabalho e atrasos que custam caro.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-          </div>
-          <h3>Falta de organização nos pedidos</h3>
-          <p>Sem controle centralizado fica impossível saber o status de cada pedido, prazo e personalização.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-          </div>
-          <h3>Atendimento lento para leads</h3>
-          <p>Clientes em potencial não recebem resposta rápida e escolhem o concorrente antes mesmo de receber uma proposta.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </div>
-          <h3>Perda de vendas e oportunidades</h3>
-          <p>Sem estratégia de brindes bem executada, sua marca perde visibilidade e os concorrentes ficam na frente.</p>
-        </div>
-      </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="https://wa.me/5551999999999?text=Ol%C3%A1%2C%20quero%20ver%20o%20cat%C3%A1logo%20completo!" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Ver catálogo completo no WhatsApp</a>
     </div>
   </div>
 </section>
 
-<!-- ── 4. SOLUÇÃO ─────────────────────────────────────────────────────── -->
-<section class="section" id="solucao">
+<!-- ── 4. PROVA SOCIAL ──────────────────────────────────────── -->
+<section class="section" id="clientes">
   <div class="container">
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-12 col-md-8">
-        <span class="eyebrow">A Solução</span>
-        <h2 class="h-section">Uma solução criada para simplificar e acelerar seus resultados.</h2>
-        <p class="lead mx-auto mt-3" style="font-size:.95rem">Desde a escolha do produto até a entrega na porta do seu cliente — cuidamos de cada etapa para que sua marca cause o impacto certo.</p>
-      </div>
+    <div style="text-align:center;margin-bottom:2.5rem">
+      <span class="eyebrow">Empresas que confiam na Marca Gaúcha</span>
+      <h2 class="h-section">Quem já atendemos</h2>
     </div>
-    <div class="row gap-3 gap-md-0">
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="sol-card">
-          <div class="sol-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-          <h3>Catálogo completo</h3>
-          <p>Centenas de produtos em diversas categorias. Encontramos a opção certa para cada ação e público.</p>
-          <span class="sol-card-badge">+500 produtos</span>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="sol-card">
-          <div class="sol-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
-          <h3>Personalização completa</h3>
-          <p>Serigrafia, laser, bordado, sublimação — sua identidade visual aplicada com precisão em cada item.</p>
-          <span class="sol-card-badge">8 técnicas</span>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="sol-card">
-          <div class="sol-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          <h3>Entrega em todo o Brasil</h3>
-          <p>Logística gerenciada do início ao fim, com rastreamento e suporte até a confirmação da entrega.</p>
-          <span class="sol-card-badge">Todo o Brasil</span>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 fade-up">
-        <div class="sol-card">
-          <div class="sol-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <h3>Atendimento dedicado</h3>
-          <p>Um especialista acompanha seu projeto do briefing à entrega, com retorno rápido e atenção ao detalhe.</p>
-          <span class="sol-card-badge">Resposta em 1h</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 5. BENEFÍCIOS ──────────────────────────────────────────────────── -->
-<section class="section section-surface">
-  <div class="container">
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-12 col-md-8">
-        <span class="eyebrow">Benefícios</span>
-        <h2 class="h-section">O que sua empresa ganha com essa solução</h2>
-      </div>
-    </div>
-    <div class="row gap-3 gap-md-0">
-      <div class="col-12 col-sm-6 col-lg-4 mb-3 fade-up"><div class="benefit-item"><div class="benefit-num">+40%</div><h3>Mais visibilidade de marca</h3><p>Brindes de uso cotidiano mantêm sua marca presente todo dia, muito além do evento.</p></div></div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3 fade-up"><div class="benefit-item"><div class="benefit-num">7x</div><h3>Mais lembrança do que anúncio digital</h3><p>Estudos mostram que brindes físicos geram recall de marca superior a campanhas online.</p></div></div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3 fade-up"><div class="benefit-item"><div class="benefit-num">98%</div><h3>Taxa de satisfação dos clientes</h3><p>Qualidade e pontualidade reconhecidas pelos clientes que confiam na Marca Gaúcha.</p></div></div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3 fade-up"><div class="benefit-item"><div class="benefit-num">24h</div><h3>Mais agilidade no atendimento</h3><p>Da solicitação à proposta aprovada em até 24 horas úteis, sem burocracia.</p></div></div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3 fade-up"><div class="benefit-item"><div class="benefit-num">100%</div><h3>Personalização sob medida</h3><p>Cada projeto é desenvolvido de acordo com a identidade visual e objetivo da sua empresa.</p></div></div>
-      <div class="col-12 col-sm-6 col-lg-4 mb-3 fade-up"><div class="benefit-item"><div class="benefit-num">0</div><h3>Preocupação com logística</h3><p>Cuidamos de tudo: produção, embalagem, rastreamento e entrega no destino certo.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 6. COMO FUNCIONA ───────────────────────────────────────────────── -->
-<section class="section" id="como-funciona">
-  <div class="container">
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-12 col-md-8">
-        <span class="eyebrow">Processo</span>
-        <h2 class="h-section">Como funciona</h2>
-        <p class="lead mx-auto mt-3" style="font-size:.95rem">Do primeiro contato à entrega final — simples, ágil e sem surpresas.</p>
-      </div>
-    </div>
-    <div class="row align-items-stretch">
-      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 fade-up">
-        <div class="step-block">
-          <div>
-            <div class="step-num-big">01</div>
-            <div class="step-content">
-              <h3>Entendemos sua empresa</h3>
-              <p>Analisamos seu público, objetivo e orçamento para indicar os melhores produtos e estratégias.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 fade-up">
-        <div class="step-block">
-          <div>
-            <div class="step-num-big">02</div>
-            <div class="step-content">
-              <h3>Criamos a proposta</h3>
-              <p>Desenvolvemos uma seleção personalizada com produtos, técnicas de personalização e prazos.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 fade-up">
-        <div class="step-block">
-          <div>
-            <div class="step-num-big">03</div>
-            <div class="step-content">
-              <h3>Produzimos e personalizamos</h3>
-              <p>Aplicamos sua identidade visual com precisão, utilizando a técnica mais adequada para cada produto.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 fade-up">
-        <div class="step-block">
-          <div>
-            <div class="step-num-big">04</div>
-            <div class="step-content">
-              <h3>Entregamos e acompanhamos</h3>
-              <p>Logística rastreada com suporte até a confirmação da entrega. Sua marca chega no lugar certo.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ── 7. SERVIÇOS ───────────────────────────────────────────────────── -->
-<section class="section" id="servicos">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="eyebrow">Serviços</span>
-      <h2 class="h-section">Soluções para cada ação da sua empresa</h2>
+    <div class="partners-row">
+      <div class="partner-badge">TechSul Sistemas</div>
+      <div class="partner-badge">Grupo Farroupilha</div>
+      <div class="partner-badge">Sul Agro</div>
+      <div class="partner-badge">Construtora Pampas</div>
+      <div class="partner-badge">Clínica Bem Estar</div>
+      <div class="partner-badge">Metalúrgica RGS</div>
+      <div class="partner-badge">Cooperativa Serra</div>
     </div>
 
-    <div class="service-block fade-up">
-      <div class="row align-items-center gap-4 gap-md-0">
-        <div class="col-12 col-md-6">
-          <span class="eyebrow">Eventos Corporativos</span>
-          <h3 class="h-section" style="font-size:1.6rem">Brindes que marcam presença em feiras, congressos e convenções.</h3>
-          <p style="color:var(--ink-muted);font-size:.92rem;line-height:1.75;margin:.875rem 0 1.25rem">Transforme a participação da sua empresa em eventos em experiências memoráveis. Brindes exclusivos que geram conexões reais e fortalecem o nome da sua marca no mercado.</p>
-          <div class="service-list">
-            <div class="service-list-item">Produtos para stands e estandes</div>
-            <div class="service-list-item">Kits personalizados por cargo ou segmento</div>
-            <div class="service-list-item">Entrega direta no local do evento</div>
-          </div>
-          <a href="#formulario" class="btn btn-red mt-4">Solicitar Orçamento</a>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="service-visual">
-            <div class="service-visual-icon">🏛️</div>
-            <p style="font-size:.88rem;color:var(--ink-muted);line-height:1.7">Brindes para feiras, congressos e convenções que geram impacto real e tornam sua empresa referência no setor.</p>
-            <div class="service-list">
-              <div class="service-list-item">Garrafas e squeezes</div>
-              <div class="service-list-item">Mochilas e bolsas</div>
-              <div class="service-list-item">Tecnologia e acessórios</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="service-block fade-up">
-      <div class="row align-items-center gap-4 gap-md-0">
-        <div class="col-12 col-md-6 order-md-2">
-          <span class="eyebrow">Endomarketing</span>
-          <h3 class="h-section" style="font-size:1.6rem">Valorize sua equipe e fortaleça a cultura da empresa.</h3>
-          <p style="color:var(--ink-muted);font-size:.92rem;line-height:1.75;margin:.875rem 0 1.25rem">Colaboradores que se sentem valorizados produzem mais e ficam mais tempo. Brindes internos bem escolhidos criam senso de pertencimento e motivam resultados.</p>
-          <div class="service-list">
-            <div class="service-list-item">Kits de boas-vindas (onboarding)</div>
-            <div class="service-list-item">Presentes por datas comemorativas</div>
-            <div class="service-list-item">Campanhas de reconhecimento internas</div>
-          </div>
-          <a href="#formulario" class="btn btn-red mt-4">Solicitar Orçamento</a>
-        </div>
-        <div class="col-12 col-md-6 order-md-1">
-          <div class="service-visual">
-            <div class="service-visual-icon">🤝</div>
-            <p style="font-size:.88rem;color:var(--ink-muted);line-height:1.7">Presentes e kits internos que criam experiências positivas e fortalecem o vínculo entre a empresa e as pessoas.</p>
-            <div class="service-list">
-              <div class="service-list-item">Canecas e copos</div>
-              <div class="service-list-item">Escritório e papelaria</div>
-              <div class="service-list-item">Saúde e bem-estar</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="service-block fade-up">
-      <div class="row align-items-center gap-4 gap-md-0">
-        <div class="col-12 col-md-6">
-          <span class="eyebrow">Relacionamento com Clientes</span>
-          <h3 class="h-section" style="font-size:1.6rem">Fidelize e encante seus clientes com brindes estratégicos.</h3>
-          <p style="color:var(--ink-muted);font-size:.92rem;line-height:1.75;margin:.875rem 0 1.25rem">Um cliente que recebe um brinde de qualidade lembra da sua marca toda vez que usa o produto. Construa lealdade através de experiências físicas que nenhum e-mail consegue criar.</p>
-          <div class="service-list">
-            <div class="service-list-item">Presentes para clientes estratégicos</div>
-            <div class="service-list-item">Kits de fidelização personalizados</div>
-            <div class="service-list-item">Campanhas de pós-venda e retenção</div>
-          </div>
-          <a href="#formulario" class="btn btn-red mt-4">Solicitar Orçamento</a>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="service-visual">
-            <div class="service-visual-icon">⭐</div>
-            <p style="font-size:.88rem;color:var(--ink-muted);line-height:1.7">Brindes premium que geram lembrança de marca positiva e aproximam sua empresa dos clientes mais importantes.</p>
-            <div class="service-list">
-              <div class="service-list-item">Vinho e artigos de bar</div>
-              <div class="service-list-item">Bolsas térmicas</div>
-              <div class="service-list-item">Linha premium e exclusiva</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 8. RESULTADOS ──────────────────────────────────────────────────── -->
-<section class="section section-surface" id="resultados">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="eyebrow">Resultados</span>
-      <h2 class="h-section">Resultados que mostram o impacto da nossa solução</h2>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-3 col-sm-6 mb-4 mb-md-0 fade-up">
-        <div class="stat-item" style="border-right:1px solid var(--border)">
-          <div class="stat-num"><span>+</span>100</div>
-          <div class="stat-label">Projetos realizados<br>com sucesso</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3 col-sm-6 mb-4 mb-md-0 fade-up">
-        <div class="stat-item" style="border-right:1px solid var(--border)">
-          <div class="stat-num">98<span>%</span></div>
-          <div class="stat-label">Satisfação dos<br>clientes atendidos</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3 col-sm-6 mb-4 mb-md-0 fade-up">
-        <div class="stat-item" style="border-right:1px solid var(--border)">
-          <div class="stat-num"><span>+</span>50<span>%</span></div>
-          <div class="stat-label">Mais eficiência<br>nos processos</div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3 col-sm-6 fade-up">
-        <div class="stat-item">
-          <div class="stat-num">24<span>h</span></div>
-          <div class="stat-label">Retorno garantido<br>em horário comercial</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 9. DEPOIMENTOS ─────────────────────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div class="text-center mb-5">
+    <div style="text-align:center;margin-bottom:2rem">
       <span class="eyebrow">Depoimentos</span>
-      <h2 class="h-section">O que nossos clientes dizem</h2>
+      <h2 class="h-section" style="font-size:1.5rem">O que nossos clientes dizem</h2>
     </div>
-    <div class="row gap-3 gap-md-0">
-      <div class="col-12 col-md-4 mb-3 mb-md-0 fade-up">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonial-text">"A Marca Gaúcha transformou nossa participação na feira do setor. Os brindes eram de excelente qualidade e nosso stand virou referência. Voltamos a trabalhar com eles no ano seguinte."</p>
-          <span class="testimonial-result">+60% de contatos no evento</span>
-          <div class="testimonial-author">
-            <div class="avatar">RC</div>
-            <div>
-              <p class="author-name">Ricardo Cardoso</p>
-              <p class="author-company">Diretor Comercial — TechSul Sistemas</p>
-            </div>
+    <div class="testi-grid">
+      <div class="testi-card fade">
+        <div class="testi-stars">
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"A qualidade dos brindes superou nossas expectativas. Nosso stand na feira virou referência e os contatos triplicaram em relação ao ano anterior."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RC</div>
+          <div>
+            <p class="testi-name">Ricardo Cardoso</p>
+            <p class="testi-role">Diretor Comercial · TechSul Sistemas</p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 mb-3 mb-md-0 fade-up">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonial-text">"Usamos os kits de onboarding da Marca Gaúcha para receber novos colaboradores. O impacto no engajamento foi imediato — as pessoas se sentiram valorizadas desde o primeiro dia."</p>
-          <span class="testimonial-result">Engajamento interno +35%</span>
-          <div class="testimonial-author">
-            <div class="avatar" style="background:#CC1F1F">AP</div>
-            <div>
-              <p class="author-name">Ana Paula Mendes</p>
-              <p class="author-company">RH — Grupo Farroupilha</p>
-            </div>
+      <div class="testi-card fade">
+        <div class="testi-stars">
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"Os kits de boas-vindas para novos colaboradores foram um sucesso. As pessoas comentaram no primeiro dia. O engajamento da equipe melhorou visivelmente."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#333">AP</div>
+          <div>
+            <p class="testi-name">Ana Paula Mendes</p>
+            <p class="testi-role">Gestora de RH · Grupo Farroupilha</p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4 fade-up">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg class="testimonial-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonial-text">"Atendimento ágil, produto de qualidade e entrega no prazo. Fizemos mais de 300 kits para clientes estratégicos e não tivemos nenhuma reclamação. Recomendo sem hesitar."</p>
-          <span class="testimonial-result">Zero reclamações em 300 kits</span>
-          <div class="testimonial-author">
-            <div class="avatar" style="background:#1A1A1A">MS</div>
-            <div>
-              <p class="author-name">Marcos Silveira</p>
-              <p class="author-company">CEO — Sul Agro Distribuidora</p>
-            </div>
+      <div class="testi-card fade">
+        <div class="testi-stars">
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"Fizemos 300 kits para clientes estratégicos. Entrega no prazo, sem nenhuma reclamação. A qualidade estava impecável. Com certeza faremos novos pedidos."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#444">MS</div>
+          <div>
+            <p class="testi-name">Marcos Silveira</p>
+            <p class="testi-role">CEO · Sul Agro Distribuidora</p>
           </div>
         </div>
       </div>
@@ -629,189 +372,68 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ── 10. DIFERENCIAIS ───────────────────────────────────────────────── -->
-<section class="section section-surface">
+<!-- ── 5. FORMULÁRIO ────────────────────────────────────────── -->
+<section class="section section-alt" id="orcamento">
   <div class="container">
-    <div class="row align-items-center gap-5 gap-md-0">
-      <div class="col-12 col-md-5">
-        <span class="eyebrow">Diferenciais</span>
-        <h2 class="h-section">Por que escolher a Marca Gaúcha?</h2>
-        <p class="lead mt-3" style="font-size:.92rem">Não somos só um fornecedor. Somos parceiros estratégicos que entendem o valor que um brinde bem executado gera para o seu negócio.</p>
-      </div>
-      <div class="col-12 col-md-7">
-        <div class="diff-item fade-up">
-          <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h3>Soluções 100% personalizadas</h3>
-          <p>Cada projeto é pensado do zero, de acordo com os objetivos, público-alvo e identidade visual da sua empresa.</p>
+    <div class="row" style="gap:0;align-items:flex-start">
+      <div class="col-md-5" style="padding-bottom:2rem">
+        <span class="eyebrow">Orçamento sem compromisso</span>
+        <h2 class="h-section">Peça seu orçamento agora</h2>
+        <p class="lead" style="margin-top:1rem">Preencha o formulário ou fale direto pelo WhatsApp. Retornamos em até 1 hora em horário comercial.</p>
+        <div style="display:flex;flex-direction:column;gap:.625rem;margin-top:1.75rem">
+          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Resposta em até 1 hora</div>
+          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Orçamento gratuito e sem compromisso</div>
+          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Atendimento personalizado</div>
+          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Entrega para todo o Brasil</div>
         </div>
-        <div class="diff-item fade-up">
-          <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <h3>Atendimento próximo e dedicado</h3>
-          <p>Um especialista acompanha seu projeto do início ao fim — sem intermediários, sem respostas automáticas.</p>
-        </div>
-        <div class="diff-item fade-up">
-          <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <h3>Qualidade e pontualidade garantidas</h3>
-          <p>Produtos de alta qualidade, entregues no prazo combinado. 98% de satisfação comprovada pelos clientes.</p>
-        </div>
-        <div class="diff-item fade-up">
-          <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-          <h3>Foco em resultados reais</h3>
-          <p>Cada brinde é escolhido estrategicamente para gerar impacto, lembrança de marca e retorno mensurável.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 11. FAQ ────────────────────────────────────────────────────────── -->
-<section class="section" id="faq">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8">
-        <div class="text-center mb-5">
-          <span class="eyebrow">Dúvidas Frequentes</span>
-          <h2 class="h-section">Perguntas frequentes</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              Como funciona o processo de pedido?
-              <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-            </button>
-            <div class="faq-answer">Entre em contato pelo formulário ou WhatsApp, nos conta o que precisa e recebe uma proposta em até 24 horas. Após aprovação, iniciamos a produção com todos os detalhes alinhados.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              Quanto tempo leva para entregar?
-              <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-            </button>
-            <div class="faq-answer">O prazo varia conforme o produto, técnica de personalização e quantidade. Em geral, trabalhamos com prazos de 7 a 15 dias úteis após aprovação da arte. Casos urgentes podem ser avaliados separadamente.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              A solução é personalizada para cada empresa?
-              <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-            </button>
-            <div class="faq-answer">Sim, 100%. Cada projeto é desenvolvido especificamente para os objetivos, público e identidade visual da sua empresa. Não trabalhamos com produtos genéricos — tudo é pensado para gerar impacto real.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              Existe pedido mínimo?
-              <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-            </button>
-            <div class="faq-answer">Depende do produto e técnica escolhidos. Para a maioria dos itens, o pedido mínimo começa em 25 a 50 unidades. Entre em contato e informamos conforme sua necessidade específica.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              Como posso solicitar um orçamento?
-              <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-            </button>
-            <div class="faq-answer">Pelo formulário ao final desta página, pelo WhatsApp ou por e-mail. Nossa equipe responde em até 1 hora em horário comercial. O orçamento é gratuito e sem compromisso.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              Vocês entregam em todo o Brasil?
-              <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-            </button>
-            <div class="faq-answer">Sim, entregamos para qualquer estado do Brasil. A logística é gerenciada pela nossa equipe, com rastreamento e suporte até a confirmação da entrega no destino final.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 12. CTA FINAL ──────────────────────────────────────────────────── -->
-<section class="cta-final">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 text-center">
-        <span class="eyebrow">Vamos começar?</span>
-        <h2 class="h-section mt-3">Está pronto para transformar a forma como sua empresa se apresenta ao mundo?</h2>
-        <p class="lead mx-auto">Brindes que geram lembrança, fidelidade e resultados reais — do briefing à entrega final.</p>
-        <a href="#formulario" class="btn btn-red btn-lg mt-4">Quero Falar com um Especialista</a>
-        <p class="cta-fine-print">Fale conosco e descubra como podemos ajudar sua empresa. Resposta em até 1h útil.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 13. FORMULÁRIO ─────────────────────────────────────────────────── -->
-<section class="section section-surface" id="formulario">
-  <div class="container">
-    <div class="row align-items-start gap-5 gap-md-0">
-      <div class="col-12 col-md-5">
-        <span class="eyebrow">Orçamento</span>
-        <h2 class="h-section">Fale com nossa equipe</h2>
-        <p class="lead mt-3" style="font-size:.92rem">Preencha o formulário e retornamos em até 1 hora com as melhores opções para a sua empresa. Orçamento gratuito e sem compromisso.</p>
-        <div style="display:flex;flex-direction:column;gap:.75rem;margin-top:2rem">
-          <div style="display:flex;align-items:center;gap:.75rem;font-size:.85rem;color:var(--ink-muted)">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0"></div>Retorno em até 1 hora em horário comercial
-          </div>
-          <div style="display:flex;align-items:center;gap:.75rem;font-size:.85rem;color:var(--ink-muted)">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0"></div>Orçamento gratuito e sem compromisso
-          </div>
-          <div style="display:flex;align-items:center;gap:.75rem;font-size:.85rem;color:var(--ink-muted)">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0"></div>Atendimento personalizado para sua necessidade
-          </div>
-          <div style="display:flex;align-items:center;gap:.75rem;font-size:.85rem;color:var(--ink-muted)">
-            <div style="width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0"></div>Entrega para todo o Brasil
-          </div>
-        </div>
-        <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)">
-          <p style="font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);margin-bottom:1rem">Ou fale direto pelo</p>
-          <a href="https://wa.me/5551999999999" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center">
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+          <p style="font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);margin-bottom:.875rem">Ou fale direto pelo WhatsApp</p>
+          <a href="https://wa.me/5551999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!" class="btn btn-wa btn-lg" target="_blank" rel="noopener" style="width:100%;justify-content:center">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chamar no WhatsApp
           </a>
         </div>
       </div>
-      <div class="col-12 col-md-7">
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-xl);padding:2.25rem;box-shadow:var(--shadow-md)">
-          <form id="qForm" onsubmit="handleSub(event)">
-            <div class="row" style="gap:0">
-              <div class="col-12 col-sm-6" style="padding-bottom:1rem">
-                <label style="display:block;font-size:.75rem;font-weight:600;margin-bottom:.35rem;color:var(--ink);letter-spacing:.02em" for="nome">Nome *</label>
-                <input type="text" id="nome" required placeholder="Seu nome" style="display:block;width:100%;padding:.7rem .95rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;transition:border-color .15s">
+      <div class="col-md-7" style="padding-bottom:2rem">
+        <div class="form-wrap">
+          <form id="qform" onsubmit="handleForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fn">Nome *</label>
+                <input class="form-input" type="text" id="fn" required placeholder="Seu nome">
               </div>
-              <div class="col-12 col-sm-6" style="padding-bottom:1rem">
-                <label style="display:block;font-size:.75rem;font-weight:600;margin-bottom:.35rem;color:var(--ink);letter-spacing:.02em" for="empresa">Empresa *</label>
-                <input type="text" id="empresa" required placeholder="Nome da empresa" style="display:block;width:100%;padding:.7rem .95rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;transition:border-color .15s">
+              <div class="form-group">
+                <label class="form-label" for="fe">E-mail *</label>
+                <input class="form-input" type="email" id="fe" required placeholder="seu@email.com">
               </div>
-              <div class="col-12 col-sm-6" style="padding-bottom:1rem">
-                <label style="display:block;font-size:.75rem;font-weight:600;margin-bottom:.35rem;color:var(--ink);letter-spacing:.02em" for="wa">WhatsApp *</label>
-                <input type="tel" id="wa" required placeholder="(51) 99999-9999" style="display:block;width:100%;padding:.7rem .95rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;transition:border-color .15s">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fw">Telefone / WhatsApp *</label>
+                <input class="form-input" type="tel" id="fw" required placeholder="(51) 99999-9999">
               </div>
-              <div class="col-12 col-sm-6" style="padding-bottom:1rem">
-                <label style="display:block;font-size:.75rem;font-weight:600;margin-bottom:.35rem;color:var(--ink);letter-spacing:.02em" for="email">E-mail</label>
-                <input type="email" id="email" placeholder="seu@email.com.br" style="display:block;width:100%;padding:.7rem .95rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;transition:border-color .15s">
-              </div>
-              <div class="col-12" style="padding-bottom:1rem">
-                <label style="display:block;font-size:.75rem;font-weight:600;margin-bottom:.35rem;color:var(--ink);letter-spacing:.02em" for="qtd">Quantidade aproximada</label>
-                <select id="qtd" style="display:block;width:100%;padding:.7rem .95rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;-webkit-appearance:none;appearance:none">
-                  <option value="">Selecione uma faixa</option>
+              <div class="form-group">
+                <label class="form-label" for="fq">Quantidade estimada</label>
+                <select class="form-input" id="fq">
+                  <option value="">Selecione</option>
                   <option>Até 50 unidades</option>
-                  <option>50 a 100 unidades</option>
-                  <option>100 a 500 unidades</option>
-                  <option>500 a 1.000 unidades</option>
-                  <option>Acima de 1.000 unidades</option>
+                  <option>50 a 200 unidades</option>
+                  <option>200 a 500 unidades</option>
+                  <option>Acima de 500 unidades</option>
                   <option>Ainda não sei</option>
                 </select>
               </div>
-              <div class="col-12" style="padding-bottom:1rem">
-                <label style="display:block;font-size:.75rem;font-weight:600;margin-bottom:.35rem;color:var(--ink);letter-spacing:.02em" for="msg">O que você procura? *</label>
-                <textarea id="msg" required placeholder="Descreva o produto, ação ou evento. Quanto mais detalhes, melhor!" style="display:block;width:100%;padding:.7rem .95rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;resize:vertical;min-height:90px;transition:border-color .15s"></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-red w-100" style="font-size:.85rem;padding:1rem">Receber Orçamento Gratuito</button>
-              </div>
             </div>
+            <div class="form-group">
+              <label class="form-label" for="fm">O que você precisa?</label>
+              <textarea class="form-input" id="fm" placeholder="Descreva o produto, evento ou campanha..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-red" style="width:100%;font-size:.85rem;padding:1rem">Receber Orçamento Gratuito</button>
           </form>
-          <div id="fOk" style="display:none;text-align:center;padding:2rem 0">
-            <div style="font-size:3rem">✅</div>
-            <h3 style="font-size:1.2rem;margin:.75rem 0 .5rem;color:var(--red)">Mensagem enviada!</h3>
-            <p style="color:var(--ink-muted);margin-bottom:1.5rem;font-size:.9rem">Nossa equipe entrará em contato em breve. Ou nos chame diretamente:</p>
+          <div id="qok" style="display:none;text-align:center;padding:2.5rem 1rem">
+            <div style="font-size:2.5rem;margin-bottom:.75rem">✅</div>
+            <h3 style="font-size:1.1rem;font-weight:800;margin:0 0 .5rem">Mensagem recebida!</h3>
+            <p style="font-size:.88rem;color:var(--ink-muted);margin-bottom:1.5rem">Nossa equipe responde em até 1 hora. Você também pode nos chamar agora:</p>
             <a href="https://wa.me/5551999999999" class="btn btn-wa btn-lg" target="_blank" rel="noopener" style="margin:0 auto">Chamar no WhatsApp</a>
           </div>
         </div>
@@ -820,61 +442,35 @@ p{margin:0}
   </div>
 </section>
 
-<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<!-- ── FOOTER ───────────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
-    <div class="row mb-4">
-      <div class="col-12 col-md-5 mb-4 mb-md-0">
-        <div class="footer-logo">Marca <em>Gaúcha</em></div>
-        <p class="footer-desc">Brindes corporativos personalizados para empresas que querem causar impacto real.</p>
-        <a href="https://wa.me/5551999999999" class="btn btn-wa" style="font-size:.75rem;padding:.55rem 1rem" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Marca Gaúcha</div>
+        <p class="footer-tagline">Brindes Corporativos Personalizados</p>
       </div>
-      <div class="col-12 col-md-3 mb-4 mb-md-0 offset-md-1">
-        <h4>Contato</h4>
-        <div class="footer-links">
-          <a href="https://wa.me/5551999999999">📱 (51) 99999-9999</a>
-          <a href="tel:5133333333">📞 (51) 3333-3333</a>
-          <a href="mailto:contato@email.com.br">✉️ contato@email.com.br</a>
-        </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <h4>Redes sociais</h4>
-        <div class="footer-links">
-          <a href="#">📸 Instagram</a>
-          <a href="#">👤 Facebook</a>
-          <a href="#">💼 LinkedIn</a>
-        </div>
+      <div class="footer-contacts">
+        <a href="https://wa.me/5551999999999">📱 (51) 99999-9999</a>
+        <a href="mailto:contato@marcagaucha.com.br">✉️ contato@marcagaucha.com.br</a>
+        <a href="#">📸 Instagram · 👤 Facebook · 💼 LinkedIn</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Marca Gaúcha — Brindes Corporativos Personalizados</span>
-      <span>Atendimento para todo o Brasil · <a href="#" style="color:rgba(255,255,255,.28)">Política de Privacidade</a></span>
-    </div>
+    <p class="footer-copy">© 2025 Marca Gaúcha — Brindes Corporativos Personalizados. Atendimento para todo o Brasil.</p>
   </div>
 </footer>
 
 <script>
-function toggleFaq(btn) {
-  var item = btn.closest('.faq-item');
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
-  if (!isOpen) item.classList.add('open');
-}
-
-function handleSub(e) {
+function handleForm(e) {
   e.preventDefault();
-  var nome = document.getElementById('nome').value;
-  var empresa = document.getElementById('empresa').value;
-  var qtd = document.getElementById('qtd').value;
-  var msg = document.getElementById('msg').value;
-  document.getElementById('qForm').style.display = 'none';
-  document.getElementById('fOk').style.display = 'block';
-  var text = encodeURIComponent('Olá! Gostaria de um orçamento.\n\n*Nome:* ' + nome + '\n*Empresa:* ' + empresa + '\n*Quantidade:* ' + (qtd || 'Não informado') + '\n*Necessidade:* ' + msg);
-  setTimeout(function(){ window.open('https://wa.me/5551999999999?text=' + text, '_blank'); }, 1800);
+  var n = document.getElementById('fn').value;
+  var q = document.getElementById('fq').value;
+  var m = document.getElementById('fm').value;
+  document.getElementById('qform').style.display = 'none';
+  document.getElementById('qok').style.display = 'block';
+  var txt = encodeURIComponent('Olá! Quero um orçamento.\n\n*Nome:* ' + n + '\n*Quantidade:* ' + (q||'Não informado') + '\n*Necessidade:* ' + (m||'—'));
+  setTimeout(function(){ window.open('https://wa.me/5551999999999?text=' + txt, '_blank'); }, 1600);
 }
-
-var obs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach(function(el){ obs.observe(el); });
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:.1});
+document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
 </script>

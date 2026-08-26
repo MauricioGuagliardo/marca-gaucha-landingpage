@@ -43,14 +43,8 @@ img{max-width:100%;display:block}
 #beneficios,#produtos,#clientes,#orcamento{position:relative}
 #beneficios::before,#produtos::before,#clientes::before,#orcamento::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0}
 #beneficios>.container,#produtos>.container,#clientes>.container,#orcamento>.container{position:relative;z-index:1}
-#beneficios{background-image:url('img/bg-beneficios.jpg');background-size:cover;background-position:center 40%}
-#beneficios::before{background:rgba(255,255,255,0.91)}
-#produtos{background-image:url('img/bg-produtos.jpg');background-size:cover;background-position:center 55%}
-#produtos::before{background:rgba(255,255,255,0.90)}
-#clientes{background-image:url('img/bg-clientes.jpg');background-size:cover;background-position:center 50%}
-#clientes::before{background:rgba(255,255,255,0.91)}
-#orcamento{background-image:url('img/bg-orcamento.jpg');background-size:cover;background-position:center 60%}
-#orcamento::before{background:rgba(255,255,255,0.89)}
+#beneficios,#produtos,#clientes,#orcamento{background-image:url('img/bg-main.jpg');background-size:cover;background-position:center 40%}
+#beneficios::before,#produtos::before,#clientes::before,#orcamento::before{background:rgba(255,255,255,0.90)}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--radius);border:none;cursor:pointer;transition:all .16s;white-space:nowrap;padding:.875rem 1.75rem}
@@ -76,7 +70,7 @@ img{max-width:100%;display:block}
 @media(max-width:767px){.nav-links{display:none}}
 
 /* ── 1. HERO ─────────────────────────────────────────────── */
-.hero{padding:5.5rem 0 5rem;border-bottom:1px solid var(--border);position:relative;background-image:url('img/hero-bg.jpg');background-size:cover;background-position:center 30%}
+.hero{padding:5.5rem 0 5rem;border-bottom:1px solid var(--border);position:relative;background-image:url('img/bg-main.jpg');background-size:cover;background-position:center 40%}
 .hero::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.88);pointer-events:none}
 .hero>.container{position:relative;z-index:1}
 .hero-subtitle{font-size:1rem;color:var(--ink-muted);line-height:1.75;max-width:52ch;margin:1.25rem 0 2.25rem}

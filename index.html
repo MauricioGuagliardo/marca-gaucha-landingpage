@@ -63,7 +63,9 @@ img{max-width:100%;display:block}
 @media(max-width:767px){.nav-links{display:none}}
 
 /* ── 1. HERO ─────────────────────────────────────────────── */
-.hero{padding:5.5rem 0 5rem;border-bottom:1px solid var(--border)}
+.hero{padding:5.5rem 0 5rem;border-bottom:1px solid var(--border);position:relative;background-image:url('img/hero-bg.jpg');background-size:cover;background-position:center 30%}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.88);pointer-events:none}
+.hero>.container{position:relative;z-index:1}
 .hero-subtitle{font-size:1rem;color:var(--ink-muted);line-height:1.75;max-width:52ch;margin:1.25rem 0 2.25rem}
 .hero-cta-group{display:flex;flex-wrap:wrap;gap:.875rem;align-items:center}
 .hero-trust{display:flex;align-items:center;gap:.6rem;margin-top:2rem;flex-wrap:wrap}

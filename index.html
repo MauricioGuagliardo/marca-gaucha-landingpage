@@ -39,6 +39,19 @@ img{max-width:100%;display:block}
 .section{padding:5rem 0}
 .section-alt{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 
+/* Section backgrounds */
+#beneficios,#produtos,#clientes,#orcamento{position:relative}
+#beneficios::before,#produtos::before,#clientes::before,#orcamento::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0}
+#beneficios>.container,#produtos>.container,#clientes>.container,#orcamento>.container{position:relative;z-index:1}
+#beneficios{background-image:url('img/bg-beneficios.jpg');background-size:cover;background-position:center 40%}
+#beneficios::before{background:rgba(255,255,255,0.91)}
+#produtos{background-image:url('img/bg-produtos.jpg');background-size:cover;background-position:center 55%}
+#produtos::before{background:rgba(255,255,255,0.90)}
+#clientes{background-image:url('img/bg-clientes.jpg');background-size:cover;background-position:center 50%}
+#clientes::before{background:rgba(255,255,255,0.91)}
+#orcamento{background-image:url('img/bg-orcamento.jpg');background-size:cover;background-position:center 60%}
+#orcamento::before{background:rgba(255,255,255,0.89)}
+
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--radius);border:none;cursor:pointer;transition:all .16s;white-space:nowrap;padding:.875rem 1.75rem}
 .btn-lg{padding:1.05rem 2.25rem;font-size:.88rem}

@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    Marca Gaúcha — JavaScript
    ═══════════════════════════════════════════════════════════ */
 
@@ -10,9 +10,6 @@ function handleForm(e) {
   var quantidade = document.getElementById('fq').value;
   var mensagem   = document.getElementById('fm').value;
 
-  document.getElementById('qform').style.display = 'none';
-  document.getElementById('qok').style.display = 'block';
-
   var texto = encodeURIComponent(
     'Olá! Quero um orçamento.\n\n' +
     '*Nome:* ' + nome + '\n' +
@@ -20,9 +17,16 @@ function handleForm(e) {
     '*Necessidade:* ' + (mensagem || '—')
   );
 
-  setTimeout(function () {
-    window.open('https://wa.me/5551979908970?text=' + texto, '_blank');
-  }, 1600);
+  var url = 'https://wa.me/555197908970?text=' + texto;
+
+  /* Abre o WhatsApp ANTES de trocar o conteúdo do form,
+     enquanto ainda estamos dentro do evento do usuário.
+     Isso evita que o browser bloqueie como popup. */
+  window.open(url, '_blank');
+
+  /* Troca o form pela mensagem de sucesso */
+  document.getElementById('qform').style.display = 'none';
+  document.getElementById('qok').style.display   = 'block';
 }
 
 /* ── Animação fade-in ao rolar a página ─────────────────── */

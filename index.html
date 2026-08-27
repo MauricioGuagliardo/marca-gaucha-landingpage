@@ -1,226 +1,346 @@
-<title>Marca Gaúcha</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marca Gaúcha — Brindes Corporativos Personalizados</title>
 
-<style>
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#ffffff;color:#0a0a0a;font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:68px}
-a{color:inherit;text-decoration:none}
-p{margin:0}
-img{max-width:100%;display:block}
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
-/* Grid */
-.container{width:100%;max-width:1140px;padding:0 1.5rem;margin:0 auto}
-.row{display:flex;flex-wrap:wrap;margin:0 -.75rem}
-.row>*{padding:0 .75rem;width:100%}
-@media(min-width:576px){.col-sm-6{width:50%}}
-@media(min-width:768px){.col-md-4{width:33.333%}.col-md-6{width:50%}.col-md-8{width:66.666%}.col-md-5{width:41.666%}.col-md-7{width:58.333%}}
-@media(min-width:992px){.col-lg-3{width:25%}.col-lg-4{width:33.333%}.col-lg-6{width:50%}}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 
-/* Tokens */
-:root{
-  --red:#CC1F1F;--red-h:#B01A1A;
-  --border:#E5E5E5;--border-2:#CECECE;
-  --surface:#F7F7F7;--surface2:#EFEFEF;
-  --ink:#0a0a0a;--ink-2:#222222;--ink-muted:#555555;--ink-light:#888888;
-  --radius:8px;--radius-lg:12px;--radius-xl:18px;
-  --shadow:0 1px 6px rgba(0,0,0,.07);--shadow-md:0 4px 18px rgba(0,0,0,.09);--shadow-lg:0 8px 36px rgba(0,0,0,.12)
-}
+  <style>
+  /* ── Brand tokens ───────────────────────────────────────── */
+  :root {
+    --red: #CC1F1F;
+    --red-h: #B01A1A;
+    --border: #E5E5E5;
+    --border-2: #CECECE;
+    --surface: #F7F7F7;
+    --surface2: #EFEFEF;
+    --ink: #0a0a0a;
+    --ink-2: #222222;
+    --ink-muted: #555555;
+    --ink-light: #888888;
+    --radius: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 18px;
+    --shadow: 0 1px 6px rgba(0,0,0,.07);
+    --shadow-md: 0 4px 18px rgba(0,0,0,.09);
+  }
 
-/* Typography */
-.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);display:block;margin-bottom:.75rem}
-.h-hero{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:var(--ink);text-wrap:balance}
-.h-section{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.12;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
-.lead{font-size:1rem;color:var(--ink-muted);line-height:1.75}
+  /* ── Global ─────────────────────────────────────────────── */
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    padding-bottom: 68px;
+    -webkit-font-smoothing: antialiased;
+  }
+  html { scroll-behavior: smooth; }
+  a { text-decoration: none; color: inherit; }
 
-/* Sections */
-.section{padding:5rem 0;background:#ffffff}
-.section-alt{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  /* ── Typography ─────────────────────────────────────────── */
+  .eyebrow {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    display: block;
+    margin-bottom: .75rem;
+  }
+  .h-hero {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -.03em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .h-section {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .lead-custom { font-size: 1rem; color: var(--ink-muted); line-height: 1.75; }
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--radius);border:none;cursor:pointer;transition:all .16s;white-space:nowrap;padding:.875rem 1.75rem}
-.btn-lg{padding:1.05rem 2.25rem;font-size:.88rem}
-.btn-red{background:var(--red);color:#ffffff}
-.btn-red:hover{background:var(--red-h);transform:translateY(-1px);box-shadow:0 6px 22px rgba(204,31,31,.28)}
-.btn-wa{background:#25D366;color:#ffffff}
-.btn-wa:hover{background:#1ebe5c;transform:translateY(-1px)}
-.btn-outline{background:transparent;border:1.5px solid var(--border-2);color:var(--ink)}
-.btn-outline:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+  /* ── Bootstrap btn overrides ────────────────────────────── */
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: .82rem;
+    border-radius: var(--radius);
+    transition: all .16s;
+  }
+  .btn-wa { background: #25D366; color: #fff; border: none; }
+  .btn-wa:hover { background: #1ebe5c; color: #fff; transform: translateY(-1px); }
+  .btn-brand { background: var(--red); color: #fff; border: none; }
+  .btn-brand:hover { background: var(--red-h); color: #fff; transform: translateY(-1px); box-shadow: 0 6px 22px rgba(204,31,31,.28); }
+  .btn-outline-custom { background: transparent; border: 1.5px solid var(--border-2); color: var(--ink); }
+  .btn-outline-custom:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .btn-hero { padding: .7rem 1.6rem; font-size: .78rem; min-width: 160px; white-space: nowrap; justify-content: center; }
 
-/* Sticky bar */
-.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:#fff;border-top:1px solid var(--border);padding:.7rem 1.25rem;display:flex;gap:.625rem;justify-content:center;box-shadow:0 -2px 14px rgba(0,0,0,.08)}
-.sticky-bar .btn{flex:1;max-width:240px;height:44px;font-size:.77rem}
+  /* ── Sticky bar ─────────────────────────────────────────── */
+  .sticky-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 1050;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: .7rem 1.25rem;
+    box-shadow: 0 -2px 14px rgba(0,0,0,.08);
+  }
+  .sticky-bar .btn { max-width: 240px; height: 44px; font-size: .77rem; flex: 1; }
 
-/* Header */
-.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.875rem 0}
-.logo{font-size:1.05rem;font-weight:900;color:var(--ink);letter-spacing:-.02em}
-.nav-links{display:flex;gap:1.75rem}
-.nav-links a{font-size:.8rem;font-weight:500;color:var(--ink-muted)}
-.nav-links a:hover{color:var(--ink)}
-@media(max-width:767px){.nav-links{display:none}}
+  /* ── Navbar ─────────────────────────────────────────────── */
+  .site-header { border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
+  .site-header.sticky-top { background: rgba(255,255,255,.97) !important; }
+  .nav-link { font-size: .8rem; font-weight: 500; color: var(--ink-muted) !important; }
+  .nav-link:hover { color: var(--ink) !important; }
+  .navbar-toggler:focus { box-shadow: none; }
 
-/* ── 1. HERO ─────────────────────────────────────────────── */
-.hero{padding:5.5rem 0 5rem;border-bottom:1px solid var(--border);position:relative;background-image:url('img/hero-bg.jpg');background-size:cover;background-position:center 35%}
-.hero::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.72);pointer-events:none}
-.hero>.container{position:relative;z-index:1}
-.hero-subtitle{font-size:1rem;color:var(--ink-muted);line-height:1.75;max-width:52ch;margin:1.25rem 0 2.25rem}
-.hero-cta-group{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
-.hero-cta-group .btn{justify-content:center;padding:.7rem 1.4rem;font-size:.78rem;width:160px}
-.hero-trust{display:flex;align-items:center;gap:.6rem;margin-top:2rem;flex-wrap:wrap}
-.hero-trust-badge{display:flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:500;color:var(--ink-muted)}
-.hero-trust-dot{width:5px;height:5px;border-radius:50%;background:var(--border-2)}
+  /* ── Hero ───────────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    padding: 5.5rem 0 5rem;
+    border-bottom: 1px solid var(--border);
+    background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center 35%;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.72);
+    pointer-events: none;
+  }
+  .hero > .container { position: relative; z-index: 1; }
+  .hero-subtitle { font-size: 1rem; color: var(--ink-muted); line-height: 1.75; max-width: 52ch; margin: 1.25rem 0 2.25rem; }
+  .hero-trust-badge { display: flex; align-items: center; gap: .4rem; font-size: .78rem; font-weight: 500; color: var(--ink-muted); }
+  .trust-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border-2); display: inline-block; }
 
-/* ── 2. BENEFÍCIOS ───────────────────────────────────────── */
-.benefit-card{display:flex;flex-direction:column;gap:.625rem;padding:1.75rem;border:1px solid var(--border);border-radius:var(--radius-lg);height:100%;transition:border-color .18s,box-shadow .18s}
-.benefit-card:hover{border-color:var(--ink);box-shadow:var(--shadow)}
-.benefit-icon{width:42px;height:42px;border-radius:var(--radius);background:var(--surface2);display:flex;align-items:center;justify-content:center;margin-bottom:.25rem}
-.benefit-icon svg{width:20px;height:20px;color:var(--ink)}
-.benefit-card h3{font-size:.95rem;font-weight:700;margin:0}
-.benefit-card p{font-size:.84rem;color:var(--ink-muted);line-height:1.65;margin:0}
+  /* ── Sections ───────────────────────────────────────────── */
+  .section { padding: 5rem 0; background: #fff; }
+  .section-alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
-/* ── 3. PRODUTOS ─────────────────────────────────────────── */
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem}
-.cat-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .18s,border-color .18s;background:#fff;display:flex;flex-direction:column}
-.cat-card:hover{box-shadow:var(--shadow-md);border-color:var(--border-2)}
-.cat-img{height:120px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:2.5rem;border-bottom:1px solid var(--border);flex-shrink:0}
-.cat-body{padding:.875rem 1rem 1rem;display:flex;flex-direction:column;gap:.625rem;flex:1}
-.cat-title{font-size:.88rem;font-weight:700;margin:0;text-align:center}
-.cat-btn{display:block;width:100%;padding:.45rem .5rem;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:center;border:1.5px solid var(--border-2);border-radius:var(--radius);color:var(--ink);background:transparent;cursor:pointer;transition:all .16s;font-family:'Inter',sans-serif;margin-top:auto}
-.cat-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  /* ── Benefit cards ──────────────────────────────────────── */
+  .benefit-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    height: 100%;
+    transition: border-color .18s, box-shadow .18s;
+  }
+  .benefit-card:hover { border-color: var(--ink); box-shadow: var(--shadow); }
+  .benefit-icon {
+    width: 42px; height: 42px;
+    border-radius: var(--radius);
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .75rem;
+  }
+  .benefit-icon svg { width: 20px; height: 20px; }
+  .benefit-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: .5rem; }
+  .benefit-card p { font-size: .84rem; color: var(--ink-muted); line-height: 1.65; margin: 0; }
 
-/* ── 4. PROVA SOCIAL ─────────────────────────────────────── */
-.partners-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:4rem}
-.partner-badge{height:52px;padding:0 1.5rem;border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--ink-muted);letter-spacing:.03em;background:#fff;min-width:120px}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
-.testi-card{border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.625rem;background:#fff}
-.testi-stars{display:flex;gap:2px;margin-bottom:.875rem}
-.star{width:13px;height:13px;fill:var(--ink);color:var(--ink)}
-.testi-quote{font-size:.88rem;color:var(--ink-2);line-height:1.75;font-style:italic;margin-bottom:1rem}
-.testi-author{display:flex;align-items:center;gap:.75rem;padding-top:.875rem;border-top:1px solid var(--border)}
-.testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.testi-name{font-size:.83rem;font-weight:700;margin:0}
-.testi-role{font-size:.72rem;color:var(--ink-muted);margin:0}
+  /* ── Product cards ──────────────────────────────────────── */
+  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 1rem; }
+  .cat-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow .18s, border-color .18s;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .cat-card:hover { box-shadow: var(--shadow-md); border-color: var(--border-2); }
+  .cat-img {
+    height: 120px;
+    background: var(--surface);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-body { padding: .875rem 1rem 1rem; display: flex; flex-direction: column; gap: .625rem; flex: 1; }
+  .cat-title { font-size: .88rem; font-weight: 700; margin: 0; text-align: center; }
+  .cat-btn {
+    display: block; width: 100%; padding: .45rem .5rem;
+    font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    text-align: center; border: 1.5px solid var(--border-2); border-radius: var(--radius);
+    color: var(--ink); background: transparent; cursor: pointer;
+    transition: all .16s; font-family: 'Inter', sans-serif; margin-top: auto;
+  }
+  .cat-btn:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 
-/* ── 5. FORMULÁRIO ───────────────────────────────────────── */
-.form-wrap{background:#fff;border:1px solid var(--border);border-radius:var(--radius-xl);padding:2.25rem;box-shadow:var(--shadow-md)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-@media(max-width:576px){.form-row{grid-template-columns:1fr}}
-.form-group{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
-.form-label{font-size:.73rem;font-weight:700;letter-spacing:.03em;color:var(--ink)}
-.form-input{display:block;width:100%;padding:.72rem 1rem;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);outline:none;transition:border-color .15s}
-.form-input:focus{border-color:var(--ink)}
-.form-input::placeholder{color:var(--ink-light)}
-select.form-input{-webkit-appearance:none;appearance:none;cursor:pointer}
-textarea.form-input{resize:vertical;min-height:80px}
+  /* ── Partners & Testimonials ────────────────────────────── */
+  .partner-badge {
+    height: 52px; padding: 0 1.5rem;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .8rem; font-weight: 700; color: var(--ink-muted);
+    letter-spacing: .03em; background: #fff; min-width: 120px;
+  }
+  .testi-card {
+    border: 1px solid var(--border); border-radius: var(--radius-lg);
+    padding: 1.625rem; background: #fff; height: 100%;
+  }
+  .star { width: 13px; height: 13px; fill: var(--ink); }
+  .testi-quote { font-size: .88rem; color: var(--ink-2); line-height: 1.75; font-style: italic; }
+  .testi-name { font-size: .83rem; font-weight: 700; margin: 0; }
+  .testi-role { font-size: .72rem; color: var(--ink-muted); margin: 0; }
+  .testi-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--ink); color: #fff;
+    font-size: .75rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
 
-/* Footer */
-.footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5rem 0 1.75rem}
-.footer-inner{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
-.footer-logo{font-size:1rem;font-weight:900;color:var(--ink);margin-bottom:.4rem}
-.footer-tagline{font-size:.78rem;color:var(--ink-muted)}
-.footer-contacts{display:flex;flex-direction:column;gap:.4rem}
-.footer-contacts a{font-size:.8rem;color:var(--ink-muted)}
-.footer-contacts a:hover{color:var(--ink)}
-.footer-copy{font-size:.72rem;color:var(--ink-light);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+  /* ── Form overrides ─────────────────────────────────────── */
+  .form-wrap {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: var(--radius-xl); padding: 2.25rem;
+    box-shadow: var(--shadow-md);
+  }
+  .form-control, .form-select {
+    background: var(--surface); border: 1.5px solid var(--border);
+    border-radius: var(--radius); font-family: 'Inter', sans-serif;
+    font-size: .88rem; color: var(--ink); padding: .72rem 1rem;
+  }
+  .form-control:focus, .form-select:focus {
+    border-color: var(--ink); background: var(--surface); box-shadow: none;
+  }
+  .form-label { font-size: .73rem; font-weight: 700; letter-spacing: .03em; color: var(--ink); margin-bottom: .35rem; }
 
-/* Fade in */
-@media(prefers-reduced-motion:no-preference){
-  .fade{opacity:0;transform:translateY(18px);transition:opacity .45s,transform .45s}
-  .fade.in{opacity:1;transform:none}
-}
-</style>
+  /* ── Footer ─────────────────────────────────────────────── */
+  .footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2.5rem 0 1.75rem; }
+  .footer-logo { font-size: 1rem; font-weight: 900; color: var(--ink); }
+  .footer-tagline { font-size: .78rem; color: var(--ink-muted); }
+  .footer-contacts a { font-size: .8rem; color: var(--ink-muted); display: block; }
+  .footer-contacts a:hover { color: var(--ink); }
+  .footer-copy { font-size: .72rem; color: var(--ink-light); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
 
-<!-- Sticky Bar -->
-<div class="sticky-bar">
-  <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20brindes%20corporativos!" class="btn btn-wa" target="_blank" rel="noopener">
+  /* ── Fade in ─────────────────────────────────────────────── */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .45s, transform .45s; }
+    .fade-in.in { opacity: 1; transform: none; }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ── STICKY BAR ───────────────────────────────────────────── -->
+<div class="sticky-bar d-flex justify-content-center gap-3">
+  <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20brindes%20corporativos!"
+     class="btn btn-wa d-flex align-items-center justify-content-center gap-2"
+     target="_blank" rel="noopener">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Chamar no WhatsApp
   </a>
 </div>
 
-<!-- ── HEADER ───────────────────────────────────────────────── -->
-<header class="site-header">
+<!-- ── NAVBAR ───────────────────────────────────────────────── -->
+<nav class="navbar navbar-expand-lg navbar-light site-header sticky-top">
   <div class="container">
-    <div class="header-inner">
-      <a href="#" class="logo" style="display:flex;align-items:center">
-        <img src="img/logo.png" alt="Marca Gaúcha" style="height:52px;width:auto;mix-blend-mode:multiply">
-      </a>
-      <nav class="nav-links">
-        <a href="#beneficios">Benefícios</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#orcamento">Orçamento</a>
-      </nav>
-      <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!" class="btn btn-wa" target="_blank" rel="noopener" style="font-size:.75rem;padding:.6rem 1.1rem">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp
-      </a>
+    <a class="navbar-brand p-0" href="#">
+      <img src="img/logo.png" alt="Marca Gaúcha" height="52" style="width:auto;mix-blend-mode:multiply">
+    </a>
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 gap-2 py-2 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#orcamento">Orçamento</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!"
+             class="btn btn-wa d-flex align-items-center gap-2"
+             style="font-size:.75rem;padding:.6rem 1.1rem" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-</header>
+</nav>
 
 <!-- ── 1. HERO ───────────────────────────────────────────────── -->
 <section class="hero">
   <div class="container">
-    <div style="display:flex;align-items:flex-start;gap:3rem;flex-wrap:wrap">
-    <!-- Logo grande -->
-    <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:.5rem;padding-top:.5rem">
-      <img src="img/logo.png" alt="Marca Gaúcha" style="height:160px;width:auto;mix-blend-mode:multiply">
+    <div class="d-flex align-items-start gap-5 flex-wrap">
+      <div class="flex-shrink-0 d-flex flex-column align-items-center pt-2">
+        <img src="img/logo.png" alt="Marca Gaúcha" height="160" style="width:auto;mix-blend-mode:multiply">
+      </div>
+      <div class="flex-grow-1" style="min-width:280px">
+        <span class="eyebrow">Brindes Corporativos Personalizados · Entrega para todo o Brasil</span>
+        <h1 class="h-hero">Brindes Personalizados que Fortalecem a sua Marca e Impressionam Clientes.</h1>
+        <p class="hero-subtitle">Brindes corporativos com identidade gaúcha, personalização a laser e bordados.</p>
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20brindes%20corporativos!"
+             class="btn btn-wa btn-hero d-flex align-items-center gap-2" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="#orcamento" class="btn btn-outline-custom btn-hero">Ver formulário</a>
+        </div>
+        <div class="d-flex flex-wrap align-items-center gap-3 mt-4">
+          <span class="hero-trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            +100 empresas atendidas
+          </span>
+          <span class="trust-dot"></span>
+          <span class="hero-trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Entrega em todo o Brasil
+          </span>
+          <span class="trust-dot"></span>
+          <span class="hero-trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Resposta em até 1h
+          </span>
+        </div>
+      </div>
     </div>
-    <div style="flex:1;min-width:280px">
-      <span class="eyebrow">Brindes Corporativos Personalizados · Entrega para todo o Brasil</span>
-      <h1 class="h-hero">Brindes Personalizados que Fortalecem a sua Marca e Impressionam Clientes.</h1>
-      <p class="hero-subtitle">Brindes corporativos com identidade gaúcha, personalização a laser e bordados.</p>
-      <div class="hero-cta-group">
-        <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20brindes%20corporativos!" class="btn btn-wa btn-lg" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp
-        </a>
-        <a href="#orcamento" class="btn btn-outline btn-lg">Ver formulário</a>
-      </div>
-      <div class="hero-trust">
-        <span class="hero-trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          +100 empresas atendidas
-        </span>
-        <span class="hero-trust-dot"></span>
-        <span class="hero-trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Entrega em todo o Brasil
-        </span>
-        <span class="hero-trust-dot"></span>
-        <span class="hero-trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Resposta em até 1h
-        </span>
-      </div>
-    </div><!-- /flex text -->
-    </div><!-- /flex row -->
   </div>
 </section>
 
-<!-- ── 2. BENEFÍCIOS ────────────────────────────────────────── -->
+<!-- ── 2. BENEFÍCIOS ─────────────────────────────────────────── -->
 <section class="section" id="beneficios">
   <div class="container">
-    <div style="text-align:center;margin-bottom:3rem">
+    <div class="text-center mb-5">
       <span class="eyebrow">Por que nos escolher?</span>
       <h2 class="h-section">Tudo que sua empresa precisa em um só lugar</h2>
     </div>
-    <div class="row" style="gap:0">
-      <div class="col-md-4" style="padding-bottom:1.25rem">
-        <div class="benefit-card fade">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="benefit-card fade-in">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
           </div>
           <h3>Personalização exclusiva</h3>
-          <p>Sua logo aplicada com acabamento profissional em serigrafia, laser, bordado, sublimação e UV digital — fiel à sua identidade visual.</p>
+          <p>Sua logo aplicada com acabamento profissional em laser, bordado, sublimação e UV digital — fiel à sua identidade visual.</p>
         </div>
       </div>
-      <div class="col-md-4" style="padding-bottom:1.25rem">
-        <div class="benefit-card fade">
+      <div class="col-md-4">
+        <div class="benefit-card fade-in">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
@@ -228,8 +348,8 @@ textarea.form-input{resize:vertical;min-height:80px}
           <p>Condições especiais para grandes volumes e empresas. Quanto maior o pedido, melhor o custo — sem abrir mão da qualidade.</p>
         </div>
       </div>
-      <div class="col-md-4" style="padding-bottom:1.25rem">
-        <div class="benefit-card fade">
+      <div class="col-md-4">
+        <div class="benefit-card fade-in">
           <div class="benefit-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
@@ -241,195 +361,71 @@ textarea.form-input{resize:vertical;min-height:80px}
   </div>
 </section>
 
-<!-- ── 3. PRODUTOS ──────────────────────────────────────────── -->
+<!-- ── 3. PRODUTOS ───────────────────────────────────────────── -->
 <section class="section section-alt" id="produtos">
   <div class="container">
-    <div style="text-align:center;margin-bottom:3rem">
+    <div class="text-center mb-5">
       <span class="eyebrow">Vitrine de Produtos</span>
       <h2 class="h-section">Itens mais pedidos por categoria</h2>
-      <p class="lead" style="max-width:52ch;margin:.875rem auto 0">Produtos de alta qualidade, prontos para receber a sua marca. Solicite amostras antes de fechar o pedido.</p>
+      <p class="lead-custom mx-auto mt-3" style="max-width:52ch">Produtos de alta qualidade, prontos para receber a sua marca. Solicite amostras antes de fechar o pedido.</p>
     </div>
     <div class="cat-grid">
-      <div class="cat-card fade">
-        <div class="cat-img">💧</div>
-        <div class="cat-body">
-          <p class="cat-title">Garrafas e Squeezes</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">☕</div>
-        <div class="cat-body">
-          <p class="cat-title">Copos e Canecas</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🍷</div>
-        <div class="cat-body">
-          <p class="cat-title">Vinho e Bar</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🍳</div>
-        <div class="cat-body">
-          <p class="cat-title">Cozinha</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🧊</div>
-        <div class="cat-body">
-          <p class="cat-title">Bolsas Térmicas</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🎒</div>
-        <div class="cat-body">
-          <p class="cat-title">Mochilas e Bolsas</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">💻</div>
-        <div class="cat-body">
-          <p class="cat-title">Tecnologia</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">📋</div>
-        <div class="cat-body">
-          <p class="cat-title">Escritório e Papelaria</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🏃</div>
-        <div class="cat-body">
-          <p class="cat-title">Saúde e Bem-Estar</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🏠</div>
-        <div class="cat-body">
-          <p class="cat-title">Casa e Utilidades</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">⚽</div>
-        <div class="cat-body">
-          <p class="cat-title">Esporte e Lazer</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">✨</div>
-        <div class="cat-body">
-          <p class="cat-title">Acessórios</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🚗</div>
-        <div class="cat-body">
-          <p class="cat-title">Automotivo</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🐾</div>
-        <div class="cat-body">
-          <p class="cat-title">Linha Pet</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">📦</div>
-        <div class="cat-body">
-          <p class="cat-title">Embalagens</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🧉</div>
-        <div class="cat-body">
-          <p class="cat-title">Cuia de Chimarrão</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🪈</div>
-        <div class="cat-body">
-          <p class="cat-title">Bomba de Chimarrão</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🌾</div>
-        <div class="cat-body">
-          <p class="cat-title">Agro-Brindes</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
+      <div class="cat-card fade-in"><div class="cat-img">💧</div><div class="cat-body"><p class="cat-title">Garrafas e Squeezes</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">☕</div><div class="cat-body"><p class="cat-title">Copos e Canecas</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🍷</div><div class="cat-body"><p class="cat-title">Vinho e Bar</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🍳</div><div class="cat-body"><p class="cat-title">Cozinha</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🧊</div><div class="cat-body"><p class="cat-title">Bolsas Térmicas</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🎒</div><div class="cat-body"><p class="cat-title">Mochilas e Bolsas</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">💻</div><div class="cat-body"><p class="cat-title">Tecnologia</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">📋</div><div class="cat-body"><p class="cat-title">Escritório e Papelaria</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🏃</div><div class="cat-body"><p class="cat-title">Saúde e Bem-Estar</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🏠</div><div class="cat-body"><p class="cat-title">Casa e Utilidades</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">⚽</div><div class="cat-body"><p class="cat-title">Esporte e Lazer</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">✨</div><div class="cat-body"><p class="cat-title">Acessórios</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🚗</div><div class="cat-body"><p class="cat-title">Automotivo</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🐾</div><div class="cat-body"><p class="cat-title">Linha Pet</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">📦</div><div class="cat-body"><p class="cat-title">Embalagens</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🧉</div><div class="cat-body"><p class="cat-title">Cuia de Chimarrão</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🪈</div><div class="cat-body"><p class="cat-title">Bomba de Chimarrão</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">🌾</div><div class="cat-body"><p class="cat-title">Agro-Brindes</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in">
         <div class="cat-img">
           <svg viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg" style="height:48px;width:auto">
-            <!-- Handle -->
             <rect x="2" y="30" width="24" height="30" rx="6" fill="#7B4A1E" stroke="#5C3210" stroke-width="1.5"/>
             <circle cx="11" cy="45" r="4.5" fill="none" stroke="#5C3210" stroke-width="1.5"/>
-            <!-- Board body -->
             <rect x="20" y="8" width="106" height="74" rx="9" fill="#C4863A" stroke="#9E651C" stroke-width="1.5"/>
-            <!-- Wood grain lines -->
             <line x1="38" y1="12" x2="38" y2="78" stroke="#9E651C" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
             <line x1="56" y1="12" x2="56" y2="78" stroke="#9E651C" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
             <line x1="74" y1="12" x2="74" y2="78" stroke="#9E651C" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
             <line x1="92" y1="12" x2="92" y2="78" stroke="#9E651C" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
             <line x1="110" y1="12" x2="110" y2="78" stroke="#9E651C" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
-            <!-- Cut marks on surface -->
             <line x1="45" y1="30" x2="80" y2="28" stroke="#9E651C" stroke-width="1" opacity="0.35"/>
             <line x1="50" y1="48" x2="95" y2="45" stroke="#9E651C" stroke-width="1" opacity="0.35"/>
             <line x1="42" y1="62" x2="85" y2="60" stroke="#9E651C" stroke-width="1" opacity="0.35"/>
           </svg>
         </div>
-        <div class="cat-body">
-          <p class="cat-title">Tábua de Madeira</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
+        <div class="cat-body"><p class="cat-title">Tábua de Madeira</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div>
       </div>
-      <div class="cat-card fade">
-        <div class="cat-img">🧢</div>
-        <div class="cat-body">
-          <p class="cat-title">Boné com Patch</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
-      <div class="cat-card fade">
-        <div class="cat-img">💼</div>
-        <div class="cat-body">
-          <p class="cat-title">Maleta Executiva</p>
-          <a href="#orcamento" class="cat-btn">Ver Produtos</a>
-        </div>
-      </div>
+      <div class="cat-card fade-in"><div class="cat-img">🧢</div><div class="cat-body"><p class="cat-title">Boné com Patch</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
+      <div class="cat-card fade-in"><div class="cat-img">💼</div><div class="cat-body"><p class="cat-title">Maleta Executiva</p><a href="#orcamento" class="cat-btn">Ver Produtos</a></div></div>
     </div>
-    <div style="text-align:center;margin-top:2.5rem">
-      <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20ver%20o%20cat%C3%A1logo%20completo!" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Ver catálogo completo no WhatsApp</a>
+    <div class="text-center mt-5">
+      <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20ver%20o%20cat%C3%A1logo%20completo!"
+         class="btn btn-outline-custom btn-lg" target="_blank" rel="noopener">
+        Ver catálogo completo no WhatsApp
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ── 4. PROVA SOCIAL ──────────────────────────────────────── -->
+<!-- ── 4. PROVA SOCIAL ───────────────────────────────────────── -->
 <section class="section" id="clientes">
   <div class="container">
-    <div style="text-align:center;margin-bottom:2.5rem">
+    <div class="text-center mb-4">
       <span class="eyebrow">Empresas que confiam na Marca Gaúcha</span>
       <h2 class="h-section">Quem já atendemos</h2>
     </div>
-    <div class="partners-row">
+    <div class="d-flex flex-wrap gap-3 justify-content-center mb-5">
       <div class="partner-badge">TechSul Sistemas</div>
       <div class="partner-badge">Grupo Farroupilha</div>
       <div class="partner-badge">Sul Agro</div>
@@ -438,60 +434,65 @@ textarea.form-input{resize:vertical;min-height:80px}
       <div class="partner-badge">Metalúrgica RGS</div>
       <div class="partner-badge">Cooperativa Serra</div>
     </div>
-
-    <div style="text-align:center;margin-bottom:2rem">
+    <div class="text-center mb-4">
       <span class="eyebrow">Depoimentos</span>
       <h2 class="h-section" style="font-size:1.5rem">O que nossos clientes dizem</h2>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card fade">
-        <div class="testi-stars">
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testi-quote">"A qualidade dos brindes superou nossas expectativas. Nosso stand na feira virou referência e os contatos triplicaram em relação ao ano anterior."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">RC</div>
-          <div>
-            <p class="testi-name">Ricardo Cardoso</p>
-            <p class="testi-role">Diretor Comercial · TechSul Sistemas</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testi-card fade-in">
+          <div class="d-flex gap-1 mb-3">
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"A qualidade dos brindes superou nossas expectativas. Nosso stand na feira virou referência e os contatos triplicaram em relação ao ano anterior."</p>
+          <div class="d-flex align-items-center gap-3 pt-3 mt-3 border-top">
+            <div class="testi-avatar">RC</div>
+            <div>
+              <p class="testi-name">Ricardo Cardoso</p>
+              <p class="testi-role">Diretor Comercial · TechSul Sistemas</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="testi-card fade">
-        <div class="testi-stars">
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testi-quote">"Os kits de boas-vindas para novos colaboradores foram um sucesso. As pessoas comentaram no primeiro dia. O engajamento da equipe melhorou visivelmente."</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:#333">AP</div>
-          <div>
-            <p class="testi-name">Ana Paula Mendes</p>
-            <p class="testi-role">Gestora de RH · Grupo Farroupilha</p>
+      <div class="col-md-4">
+        <div class="testi-card fade-in">
+          <div class="d-flex gap-1 mb-3">
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"Os kits de boas-vindas para novos colaboradores foram um sucesso. As pessoas comentaram no primeiro dia. O engajamento da equipe melhorou visivelmente."</p>
+          <div class="d-flex align-items-center gap-3 pt-3 mt-3 border-top">
+            <div class="testi-avatar" style="background:#333">AP</div>
+            <div>
+              <p class="testi-name">Ana Paula Mendes</p>
+              <p class="testi-role">Gestora de RH · Grupo Farroupilha</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="testi-card fade">
-        <div class="testi-stars">
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testi-quote">"Fizemos 300 kits para clientes estratégicos. Entrega no prazo, sem nenhuma reclamação. A qualidade estava impecável. Com certeza faremos novos pedidos."</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:#444">MS</div>
-          <div>
-            <p class="testi-name">Marcos Silveira</p>
-            <p class="testi-role">CEO · Sul Agro Distribuidora</p>
+      <div class="col-md-4">
+        <div class="testi-card fade-in">
+          <div class="d-flex gap-1 mb-3">
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-quote">"Fizemos 300 kits para clientes estratégicos. Entrega no prazo, sem nenhuma reclamação. A qualidade estava impecável. Com certeza faremos novos pedidos."</p>
+          <div class="d-flex align-items-center gap-3 pt-3 mt-3 border-top">
+            <div class="testi-avatar" style="background:#444">MS</div>
+            <div>
+              <p class="testi-name">Marcos Silveira</p>
+              <p class="testi-role">CEO · Sul Agro Distribuidora</p>
+            </div>
           </div>
         </div>
       </div>
@@ -499,49 +500,57 @@ textarea.form-input{resize:vertical;min-height:80px}
   </div>
 </section>
 
-<!-- ── 5. FORMULÁRIO ────────────────────────────────────────── -->
+<!-- ── 5. FORMULÁRIO ─────────────────────────────────────────── -->
 <section class="section section-alt" id="orcamento">
   <div class="container">
-    <div class="row" style="gap:0;align-items:flex-start">
-      <div class="col-md-5" style="padding-bottom:2rem">
+    <div class="row g-5 align-items-start">
+      <div class="col-md-5">
         <span class="eyebrow">Orçamento sem compromisso</span>
         <h2 class="h-section">Peça seu orçamento agora</h2>
-        <p class="lead" style="margin-top:1rem">Preencha o formulário ou fale direto pelo WhatsApp. Retornamos em até 1 hora em horário comercial.</p>
-        <div style="display:flex;flex-direction:column;gap:.625rem;margin-top:1.75rem">
-          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Resposta em até 1 hora</div>
-          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Orçamento gratuito e sem compromisso</div>
-          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Atendimento personalizado</div>
-          <div style="display:flex;align-items:center;gap:.625rem;font-size:.83rem;color:var(--ink-muted)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Entrega para todo o Brasil</div>
+        <p class="lead-custom mt-3">Preencha o formulário ou fale direto pelo WhatsApp. Retornamos em até 1 hora em horário comercial.</p>
+        <div class="d-flex flex-column gap-2 mt-4">
+          <div class="d-flex align-items-center gap-2" style="font-size:.83rem;color:var(--ink-muted)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Resposta em até 1 hora
+          </div>
+          <div class="d-flex align-items-center gap-2" style="font-size:.83rem;color:var(--ink-muted)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Orçamento gratuito e sem compromisso
+          </div>
+          <div class="d-flex align-items-center gap-2" style="font-size:.83rem;color:var(--ink-muted)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Atendimento personalizado
+          </div>
+          <div class="d-flex align-items-center gap-2" style="font-size:.83rem;color:var(--ink-muted)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Entrega para todo o Brasil
+          </div>
         </div>
-        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
+        <div class="mt-4 pt-4 border-top">
           <p style="font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-light);margin-bottom:.875rem">Ou fale direto pelo WhatsApp</p>
-          <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!" class="btn btn-wa btn-lg" target="_blank" rel="noopener" style="width:100%;justify-content:center">
+          <a href="https://wa.me/5551979908970?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!"
+             class="btn btn-wa btn-lg w-100 d-flex align-items-center justify-content-center gap-2"
+             target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chamar no WhatsApp
           </a>
         </div>
       </div>
-      <div class="col-md-7" style="padding-bottom:2rem">
+      <div class="col-md-7">
         <div class="form-wrap">
           <form id="qform" onsubmit="handleForm(event)">
-            <div class="form-row">
-              <div class="form-group">
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
                 <label class="form-label" for="fn">Nome *</label>
-                <input class="form-input" type="text" id="fn" required placeholder="Seu nome">
+                <input class="form-control" type="text" id="fn" required placeholder="Seu nome">
               </div>
-              <div class="form-group">
+              <div class="col-sm-6">
                 <label class="form-label" for="fe">E-mail *</label>
-                <input class="form-input" type="email" id="fe" required placeholder="seu@email.com">
+                <input class="form-control" type="email" id="fe" required placeholder="seu@email.com">
               </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
+              <div class="col-sm-6">
                 <label class="form-label" for="fw">Telefone / WhatsApp *</label>
-                <input class="form-input" type="tel" id="fw" required placeholder="(51) 97908-970">
+                <input class="form-control" type="tel" id="fw" required placeholder="(51) 97908-970">
               </div>
-              <div class="form-group">
+              <div class="col-sm-6">
                 <label class="form-label" for="fq">Quantidade estimada</label>
-                <select class="form-input" id="fq">
+                <select class="form-select" id="fq">
                   <option value="">Selecione</option>
                   <option>Até 50 unidades</option>
                   <option>50 a 200 unidades</option>
@@ -550,18 +559,22 @@ textarea.form-input{resize:vertical;min-height:80px}
                   <option>Ainda não sei</option>
                 </select>
               </div>
+              <div class="col-12">
+                <label class="form-label" for="fm">O que você precisa?</label>
+                <textarea class="form-control" id="fm" rows="3" placeholder="Descreva o produto, evento ou campanha..."></textarea>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="fm">O que você precisa?</label>
-              <textarea class="form-input" id="fm" placeholder="Descreva o produto, evento ou campanha..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-red" style="width:100%;font-size:.85rem;padding:1rem">Receber Orçamento Gratuito</button>
+            <button type="submit" class="btn btn-brand w-100" style="font-size:.85rem;padding:1rem">
+              Receber Orçamento Gratuito
+            </button>
           </form>
           <div id="qok" style="display:none;text-align:center;padding:2.5rem 1rem">
             <div style="font-size:2.5rem;margin-bottom:.75rem">✅</div>
             <h3 style="font-size:1.1rem;font-weight:800;margin:0 0 .5rem">Mensagem recebida!</h3>
             <p style="font-size:.88rem;color:var(--ink-muted);margin-bottom:1.5rem">Nossa equipe responde em até 1 hora. Você também pode nos chamar agora:</p>
-            <a href="https://wa.me/5551979908970" class="btn btn-wa btn-lg" target="_blank" rel="noopener" style="margin:0 auto">Chamar no WhatsApp</a>
+            <a href="https://wa.me/5551979908970" class="btn btn-wa btn-lg d-flex align-items-center gap-2 mx-auto" style="width:fit-content" target="_blank" rel="noopener">
+              Chamar no WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -569,10 +582,10 @@ textarea.form-input{resize:vertical;min-height:80px}
   </div>
 </section>
 
-<!-- ── FOOTER ───────────────────────────────────────────────── -->
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="d-flex flex-wrap gap-4 justify-content-between align-items-start">
       <div>
         <div class="footer-logo">Marca Gaúcha</div>
         <p class="footer-tagline">Brindes Corporativos Personalizados</p>
@@ -587,6 +600,9 @@ textarea.form-input{resize:vertical;min-height:80px}
   </div>
 </footer>
 
+<!-- Bootstrap 5 JS Bundle (inclui Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
 function handleForm(e) {
   e.preventDefault();
@@ -595,9 +611,15 @@ function handleForm(e) {
   var m = document.getElementById('fm').value;
   document.getElementById('qform').style.display = 'none';
   document.getElementById('qok').style.display = 'block';
-  var txt = encodeURIComponent('Olá! Quero um orçamento.\n\n*Nome:* ' + n + '\n*Quantidade:* ' + (q||'Não informado') + '\n*Necessidade:* ' + (m||'—'));
-  setTimeout(function(){ window.open('https://wa.me/5551979908970?text=' + txt, '_blank'); }, 1600);
+  var txt = encodeURIComponent('Olá! Quero um orçamento.\n\n*Nome:* ' + n + '\n*Quantidade:* ' + (q || 'Não informado') + '\n*Necessidade:* ' + (m || '—'));
+  setTimeout(function () { window.open('https://wa.me/5551979908970?text=' + txt, '_blank'); }, 1600);
 }
-var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:.1});
-document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
+
+var io = new IntersectionObserver(function (es) {
+  es.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: .1 });
+document.querySelectorAll('.fade-in').forEach(function (el) { io.observe(el); });
 </script>
+
+</body>
+</html>

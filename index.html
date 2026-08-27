@@ -68,7 +68,7 @@ img{max-width:100%;display:block}
 .hero>.container{position:relative;z-index:1}
 .hero-subtitle{font-size:1rem;color:var(--ink-muted);line-height:1.75;max-width:52ch;margin:1.25rem 0 2.25rem}
 .hero-cta-group{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
-.hero-cta-group .btn{justify-content:center;padding:.7rem 1.4rem;font-size:.78rem}
+.hero-cta-group .btn{justify-content:center;padding:.7rem 1.4rem;font-size:.78rem;width:160px}
 .hero-trust{display:flex;align-items:center;gap:.6rem;margin-top:2rem;flex-wrap:wrap}
 .hero-trust-badge{display:flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:500;color:var(--ink-muted)}
 .hero-trust-dot{width:5px;height:5px;border-radius:50%;background:var(--border-2)}
@@ -601,4 +601,3 @@ function handleForm(e) {
 var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:.1});
 document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
 </script>
-<!-- Wed Aug 26 21:11:18     2026 -->

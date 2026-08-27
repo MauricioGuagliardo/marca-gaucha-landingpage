@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    Marca Gaúcha — JavaScript
    ═══════════════════════════════════════════════════════════ */
 
@@ -17,7 +17,7 @@ function handleForm(e) {
     '*Necessidade:* ' + (mensagem || '—')
   );
 
-  var url = 'https://wa.me/5551979908970?text=' + texto;
+  var url = 'https://wa.me/555197908970?text=' + texto;
 
   /* Abre o WhatsApp ANTES de trocar o conteúdo do form,
      enquanto ainda estamos dentro do evento do usuário.

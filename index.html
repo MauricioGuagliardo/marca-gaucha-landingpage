@@ -64,7 +64,7 @@ img{max-width:100%;display:block}
 
 /* ── 1. HERO ─────────────────────────────────────────────── */
 .hero{padding:5.5rem 0 5rem;border-bottom:1px solid var(--border);position:relative;background-image:url('img/hero-bg.jpg');background-size:cover;background-position:center 35%}
-.hero::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.82);pointer-events:none}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.72);pointer-events:none}
 .hero>.container{position:relative;z-index:1}
 .hero-subtitle{font-size:1rem;color:var(--ink-muted);line-height:1.75;max-width:52ch;margin:1.25rem 0 2.25rem}
 .hero-cta-group{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
@@ -146,7 +146,7 @@ textarea.form-input{resize:vertical;min-height:80px}
   <div class="container">
     <div class="header-inner">
       <a href="#" class="logo" style="display:flex;align-items:center">
-        <img src="img/logo.png" alt="Marca Gaúcha" style="height:52px;width:auto;mix-blend-mode:normal">
+        <img src="img/logo.png" alt="Marca Gaúcha" style="height:52px;width:auto;mix-blend-mode:multiply">
       </a>
       <nav class="nav-links">
         <a href="#beneficios">Benefícios</a>
@@ -168,7 +168,7 @@ textarea.form-input{resize:vertical;min-height:80px}
     <div style="display:flex;align-items:flex-start;gap:3rem;flex-wrap:wrap">
     <!-- Logo grande -->
     <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:.5rem;padding-top:.5rem">
-      <img src="img/logo.png" alt="Marca Gaúcha" style="height:160px;width:auto;mix-blend-mode:normal">
+      <img src="img/logo.png" alt="Marca Gaúcha" style="height:160px;width:auto;mix-blend-mode:multiply">
     </div>
     <div style="flex:1;min-width:280px">
       <span class="eyebrow">Brindes Corporativos Personalizados · Entrega para todo o Brasil</span>
@@ -601,4 +601,3 @@ function handleForm(e) {
 var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:.1});
 document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
 </script>
-<!-- deploy 1787789758 -->

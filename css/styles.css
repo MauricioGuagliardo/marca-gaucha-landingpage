@@ -163,12 +163,6 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; justify-content: center;
   border-bottom: 1px solid var(--border);
 }
-.cat-icon {
-  font-size: 2.6rem;
-  color: var(--red);
-  opacity: .82;
-  line-height: 1;
-}
 .cat-body { padding: .875rem 1rem 1rem; display: flex; flex-direction: column; gap: .625rem; flex: 1; }
 .cat-title { font-size: .88rem; font-weight: 700; margin: 0; text-align: center; }
 .cat-btn {

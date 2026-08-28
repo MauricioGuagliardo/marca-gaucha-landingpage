@@ -28,17 +28,17 @@ body {
   color: var(--ink);
   padding-bottom: 68px;
   -webkit-font-smoothing: antialiased;
-  background-image: url('../img/hero-bg.jpg');
+  background-image: url('../img/fundo-marca-gaucha.webp');
   background-size: cover;
-  background-position: center 35%;
+  background-position: center top;
   background-attachment: fixed;
-  background-color: #1a0e08;
+  background-color: #f0e8dc;
 }
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.82);
+  background: rgba(255,255,255,0.55);
   z-index: 0;
   pointer-events: none;
 }

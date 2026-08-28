@@ -31,19 +31,20 @@ body {
   background-image: url('../img/fundo-marca-gaucha.webp');
   background-size: cover;
   background-position: center top;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
   background-color: #f0e8dc;
 }
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.45);
   z-index: 0;
   pointer-events: none;
 }
 body > * { position: relative; z-index: 1; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; min-height: 100%; }
 a { text-decoration: none; color: inherit; }
 
 /* ── Typography ─────────────────────────────────────────── */

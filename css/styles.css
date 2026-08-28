@@ -26,11 +26,26 @@
 body {
   font-family: 'Inter', system-ui, sans-serif;
   color: var(--ink);
-  background: #fff;
   padding-bottom: 68px;
   -webkit-font-smoothing: antialiased;
+  background-color: #f0e8dc;
 }
-html { scroll-behavior: smooth; }
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/fundo-marca-gaucha.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: saturate(1.6) contrast(1.15) brightness(0.92);
+  z-index: 0;
+  pointer-events: none;
+}
+body > * { position: relative; z-index: 1; }
+html { scroll-behavior: smooth; min-height: 100%; }
 a { text-decoration: none; color: inherit; }
 
 /* ── Typography ─────────────────────────────────────────── */
@@ -84,7 +99,8 @@ a { text-decoration: none; color: inherit; }
   position: fixed;
   bottom: 0; left: 0; right: 0;
   z-index: 1050;
-  background: #fff;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(10px);
   border-top: 1px solid var(--border);
   padding: .7rem 1.25rem;
   box-shadow: 0 -2px 14px rgba(0,0,0,.08);
@@ -92,36 +108,24 @@ a { text-decoration: none; color: inherit; }
 .sticky-bar .btn { max-width: 240px; height: 44px; font-size: .77rem; flex: 1; }
 
 /* ── Navbar ─────────────────────────────────────────────── */
-.site-header { border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
-.site-header.sticky-top { background: rgba(255,255,255,.97) !important; }
+.site-header { border-bottom: 1px solid var(--border); backdrop-filter: blur(14px); background: rgba(255,255,255,.88) !important; }
+.site-header.sticky-top { background: rgba(255,255,255,.92) !important; }
 .nav-link { font-size: .8rem; font-weight: 500; color: var(--ink-muted) !important; }
 .nav-link:hover { color: var(--ink) !important; }
 .navbar-toggler:focus { box-shadow: none; }
 
 /* ── Hero ───────────────────────────────────────────────── */
 .hero {
-  position: relative;
   padding: 5.5rem 0 5rem;
   border-bottom: 1px solid var(--border);
-  background-image: url('../img/hero-bg.jpg');
-  background-size: cover;
-  background-position: center 35%;
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.72);
-  pointer-events: none;
-}
-.hero > .container { position: relative; z-index: 1; }
 .hero-subtitle { font-size: 1rem; color: var(--ink-muted); line-height: 1.75; max-width: 52ch; margin: 1.25rem 0 2.25rem; }
 .hero-trust-badge { display: flex; align-items: center; gap: .4rem; font-size: .78rem; font-weight: 500; color: var(--ink-muted); }
 .trust-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border-2); display: inline-block; }
 
 /* ── Sections ───────────────────────────────────────────── */
-.section { padding: 5rem 0; background: #fff; }
-.section-alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section { padding: 5rem 0; background: transparent; }
+.section-alt { background: transparent; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 /* ── Benefit cards ──────────────────────────────────────── */
 .benefit-card {
@@ -214,7 +218,7 @@ a { text-decoration: none; color: inherit; }
 .form-label { font-size: .73rem; font-weight: 700; letter-spacing: .03em; color: var(--ink); margin-bottom: .35rem; }
 
 /* ── Footer ─────────────────────────────────────────────── */
-.footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2.5rem 0 1.75rem; }
+.footer { background: rgba(247,247,247,.92); border-top: 1px solid var(--border); padding: 2.5rem 0 1.75rem; backdrop-filter: blur(8px); }
 .footer-logo { font-size: 1rem; font-weight: 900; color: var(--ink); }
 .footer-tagline { font-size: .78rem; color: var(--ink-muted); }
 .footer-contacts a { font-size: .8rem; color: var(--ink-muted); display: block; }
